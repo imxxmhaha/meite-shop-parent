@@ -1,0 +1,26 @@
+###服务启动端口号
+server:
+  port: 8300
+###服务名称(服务注册到eureka名称)
+spring:
+    application:
+        name: app-mayikt-member
+###服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka
+
+
+
+
+####swagger相关配置
+swagger:
+  base-package: com.mayikt.member.service
+  title: SpringCloud2.x构建微服务电商项目-微信服务接口
+  description: 该项目“基于SpringCloud2.x构建微服务电商项目”
+  version: 1.1
+  terms-of-service-url: www.wxcs.cn
+  contact:
+    name: 比以往快10倍的登录方式
+    email: 416660553@qq.com
