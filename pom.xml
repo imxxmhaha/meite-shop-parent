@@ -6,11 +6,10 @@
 
     <groupId>com.mayikt</groupId>
     <artifactId>meite-shop-parent</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0-RELEASE</version>
     <modules>
         <module>meite-shop-basics</module>
         <module>meite-shop-service-api</module>
-        <module>meite-shop-api-entitys</module>
         <module>meite-shop-service-impl</module>
     </modules>
     <packaging>pom</packaging>
@@ -79,8 +78,15 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <!-- 注意： 这里必须要添加， 否者各种依赖有问题 -->
+
+    <distributionManagement>
+        <repository>
+            <id>xxm</id>
+            <url>http://192.168.170.129:8081/repository/xxm-release/</url>
+        </repository>
+    </distributionManagement>
     <repositories>
+
         <repository>
             <id>spring-milestones</id>
             <name>Spring Milestones</name>
@@ -89,6 +95,32 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+
+
     </repositories>
 
+    <build>
+        <plugins>
+            <!--发布代码Jar插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.7</version>
+            </plugin>
+            <!--发布源码插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
