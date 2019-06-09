@@ -12,29 +12,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class BizException extends RuntimeException {
     private static final long serialVersionUID = 4061732202885069884L;
-    /**
-     * 异常码
-     */
-    private String code;
-    /**
-     * 异常描述
-     */
-    private String msg;
 
-    public BizException(String code, String msg) {
-        super(msg);
-        this.code = code;
-        this.msg = msg;
-    }
+
+    private ResultCode resultCode;
 
     public BizException(ResultCode resultCode) {
-        this.code=String.valueOf(resultCode.code());
-        this.msg=resultCode.message();
+        //异常信息为错误代码+异常信息
+        super("错误代码：" + resultCode.code() + "错误信息：" + resultCode.message());
+        this.resultCode = resultCode;
     }
-
-
-    public BizException(String message) {
-        super(message);
+    public ResultCode getResultCode() {
+        return this.resultCode;
     }
-
 }

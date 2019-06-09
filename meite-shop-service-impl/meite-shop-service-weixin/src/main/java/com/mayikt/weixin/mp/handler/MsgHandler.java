@@ -1,10 +1,13 @@
 package com.mayikt.weixin.mp.handler;
 
 
+import com.mayikt.api.member.service.MemberService;
+import com.mayikt.common.base.BaseResponse;
 import com.mayikt.common.constants.Constants;
 import com.mayikt.common.core.utils.RedisUtil;
 import com.mayikt.common.core.utils.RediskeyUtils;
 import com.mayikt.common.core.utils.RegexUtils;
+import com.mayikt.member.entity.UserEntity;
 import com.mayikt.weixin.mp.builder.TextBuilder;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.error.WxErrorException;
@@ -42,6 +45,9 @@ public class MsgHandler extends AbstractHandler {
     @Autowired
     private RedisUtil redisUtil;
 
+    @Autowired
+    private MemberService memberServiceFeign;
+
     @Override
     public WxMpXmlOutMessage handle(WxMpXmlMessage wxMessage, Map<String, Object> context, WxMpService weixinService,
                                     WxSessionManager sessionManager) {
@@ -65,6 +71,15 @@ public class MsgHandler extends AbstractHandler {
         log.info("fromContent:" + fromContent);
         // 2.使用正则表达式验证消息是否为手机号码格式
         if (RegexUtils.checkMobile(fromContent)){
+            // 2.1根据手机号码调用会员服务接口查询用户信息是否存在
+            BaseResponse<UserEntity> response = memberServiceFeign.existMobile(fromContent);
+            if(Constants.HTTP_RES_CODE_200.equals(response.getCode())){
+                return new TextBuilder().build("该手机号:"+fromContent+"已经存在", wxMessage, weixinService);
+            }
+
+            if(!Constants.HTTP_RES_CODE_EXISTMOBILE_202.equals(response.getCode())){
+                return new TextBuilder().build(response.getMsg(), wxMessage, weixinService);
+            }
             // 3.如果是手机号码格式的话,随机生成4位数字验证码
             int registCode = getRegistCode();
             // 4.将验证码存放在Redis中
