@@ -17,6 +17,11 @@
             <artifactId>meite-shop-api-weixin-entity</artifactId>
             <version>1.0-RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>com.mayikt</groupId>
+            <artifactId>meite-shop-api-member-entity</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
     </dependencies>
 
 </project>

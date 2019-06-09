@@ -1,6 +1,5 @@
 package com.mayikt.api.weixin.service;
 
-import com.mayikt.entity.weixin.AppEntity;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -22,5 +21,5 @@ public interface WeiXinService {
      */
     @ApiOperation(value = "微信应用服务接口")
     @GetMapping("/getApp")
-    public AppEntity getApp();
+    public com.mayikt.common.base.BaseResponse getApp();
 }

@@ -18,6 +18,11 @@
             <version>1.0-RELEASE</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.mayikt</groupId>
+            <artifactId>meite-shop-common-core</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
         <!--会员调用微信接口-->
         <dependency>
             <groupId>com.mayikt</groupId>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mayikt.member.dao.UserDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mayikt.member.entity.UserEntity">
+        <id column="USER_ID" property="userId" />
+        <result column="MOBILE" property="mobile" />
+        <result column="EMAIL" property="email" />
+        <result column="PASSWORD" property="password" />
+        <result column="USER_NAME" property="userName" />
+        <result column="SEX" property="sex" />
+        <result column="AGE" property="age" />
+        <result column="CREATE_TIME" property="createTime" />
+        <result column="IS_AVALIBLE" property="isAvalible" />
+        <result column="PIC_IMG" property="picImg" />
+        <result column="QQ_OPENID" property="qqOpenid" />
+        <result column="WX_OPENID" property="wxOpenid" />
+    </resultMap>
+
+</mapper>

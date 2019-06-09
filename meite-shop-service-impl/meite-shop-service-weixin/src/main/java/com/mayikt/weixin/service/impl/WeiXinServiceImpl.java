@@ -1,6 +1,8 @@
 package com.mayikt.weixin.service.impl;
 
 import com.mayikt.api.weixin.service.WeiXinService;
+import com.mayikt.common.base.BaseApiService;
+import com.mayikt.common.base.BaseResponse;
 import com.mayikt.entity.weixin.AppEntity;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @create 2019-05-29 19:09
  */
 @RestController
-public class WeiXinServiceImpl implements WeiXinService {
+public class WeiXinServiceImpl extends BaseApiService<AppEntity> implements WeiXinService {
 
     /**
      *  1.接口中已经定义了GetMapping  这里可以不用定义,继承接口中的GetMapping
@@ -18,8 +20,10 @@ public class WeiXinServiceImpl implements WeiXinService {
      * @return
      */
     //@GetMapping("/getApp")
-    public AppEntity getApp() {
-        return new AppEntity("xxm","416660553");
+    public BaseResponse getApp() {
+        //return  BaseResponse.ok(new AppEntity("xxm","416660553"));
+        return setResultSuccess(new AppEntity("xxm","416660553"));
+        //return setResultError("系统错误");
     }
 
     // 问题:为什么命名为service  而不是controller  没有表现层

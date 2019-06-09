@@ -2,9 +2,8 @@ package com.mayikt.member.service.impl;
 
 import com.mayikt.api.member.service.MemberService;
 import com.mayikt.api.weixin.service.WeiXinService;
-import com.mayikt.entity.weixin.AppEntity;
+import com.mayikt.common.base.BaseResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -24,9 +23,9 @@ public class MemberServiceImpl implements MemberService {
      *  3.接口中定义的映射路径 主要是为了给Feign客户端调用的
      * @return
      */
-    public AppEntity memberToWeiXin() {
-        AppEntity app = weiXinService.getApp();
-        return app;
+    public BaseResponse memberToWeiXin() {
+        BaseResponse baseResponse = weiXinService.getApp();
+        return baseResponse;
     }
 
     // 问题:为什么命名为service  而不是controller  没有表现层

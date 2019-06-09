@@ -1,6 +1,6 @@
 package com.mayikt.api.member.service;
 
-import com.mayikt.entity.weixin.AppEntity;
+import com.mayikt.common.base.BaseResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,5 +19,5 @@ public interface MemberService {
      */
     @ApiOperation(value = "会员服务调用微信服务")
     @GetMapping("/memberToWeiXin")
-    public AppEntity memberToWeiXin();
+    public BaseResponse memberToWeiXin();
 }

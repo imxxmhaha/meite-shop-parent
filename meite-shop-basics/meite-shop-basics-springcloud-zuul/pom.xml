@@ -23,7 +23,7 @@
             <version>1.7.0.RELEASE</version>
         </dependency>
 
-        <!-- 阿波罗整合 SpringBoot -->
+        <!-- 阿波罗整合 SpringBoot 开始 -->
         <dependency>
             <groupId>com.ctrip.framework.apollo</groupId>
             <artifactId>apollo-client</artifactId>
@@ -34,7 +34,7 @@
             <artifactId>apollo-core</artifactId>
             <version>1.0.0</version>
         </dependency>
-
+        <!-- 阿波罗整合 SpringBoot 结束 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
