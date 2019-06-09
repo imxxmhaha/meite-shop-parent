@@ -12,7 +12,11 @@
     <artifactId>meite-shop-service-api-weixin</artifactId>
 
     <dependencies>
-
+        <dependency>
+            <groupId>com.mayikt</groupId>
+            <artifactId>meite-shop-api-weixin-entity</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
     </dependencies>
 
 </project>

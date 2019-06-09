@@ -1,8 +1,7 @@
 package com.mayikt.weixin.service.impl;
 
-import com.mayikt.api.weixin.entity.AppEntity;
 import com.mayikt.api.weixin.service.WeiXinService;
-import org.springframework.web.bind.annotation.GetMapping;
+import com.mayikt.entity.weixin.AppEntity;
 import org.springframework.web.bind.annotation.RestController;
 
 /**

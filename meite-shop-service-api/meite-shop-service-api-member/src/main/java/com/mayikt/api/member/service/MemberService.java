@@ -1,6 +1,6 @@
 package com.mayikt.api.member.service;
 
-import com.mayikt.api.weixin.entity.AppEntity;
+import com.mayikt.entity.weixin.AppEntity;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
