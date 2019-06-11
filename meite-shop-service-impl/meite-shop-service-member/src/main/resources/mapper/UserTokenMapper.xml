@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mayikt.member.dao.UserTokenDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mayikt.member.entity.UserToken">
+        <id column="id" property="id" />
+        <result column="token" property="token" />
+        <result column="login_type" property="loginType" />
+        <result column="device_infor" property="deviceInfor" />
+        <result column="is_availability" property="isAvailability" />
+        <result column="user_id" property="userId" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+
+</mapper>
