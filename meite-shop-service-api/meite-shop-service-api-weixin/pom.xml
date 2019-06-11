@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.mayikt</groupId>
-            <artifactId>meite-shop-api-weixin-entity</artifactId>
+            <artifactId>meite-shop-api-weixin-dto</artifactId>
             <version>1.0-RELEASE</version>
         </dependency>
     </dependencies>

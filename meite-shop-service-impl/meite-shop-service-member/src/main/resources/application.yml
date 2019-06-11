@@ -68,4 +68,9 @@
 #  configuration:
 #    call-setters-on-nulls: true
 #    map-underscore-to-camel-case: true
-#    cache-enabled: false
+#    cache-enabled: falselogging:
+
+###Mybatis日志
+#logging:
+#  level:
+#    com.mayikt.member.dao: debug

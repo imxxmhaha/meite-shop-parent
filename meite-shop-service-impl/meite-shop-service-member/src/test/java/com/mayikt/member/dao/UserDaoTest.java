@@ -28,7 +28,7 @@ public class UserDaoTest {
         userEntity.setEmail("416660553@qq.com");
         userEntity.setPassword("1214564as6d4");
         userEntity.setSex('1');
-        userEntity.setIsAvalible('1');
+        userEntity.setIsAvalible(1);
         Integer insert = userDao.insert(userEntity);
         System.out.println(insert);
     }

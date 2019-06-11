@@ -12,4 +12,10 @@ public class RediskeyUtils {
     public static String getWeixinCode(String content){
         return Constants.WEIXINCODE_KEY + content;
     }
+
+
+    // 微信注册码存放rediskey
+    public static String getTokenPrefix(String loginType){
+        return Constants.MEMBER_TOKEN_KEYPREFIX+loginType+":";
+    }
 }
