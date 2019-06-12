@@ -1,0 +1,43 @@
+#server:
+#  port: 8400
+##### 整合freemarker
+#spring:
+#  freemarker:
+#    cache: false
+#    charset: UTF-8
+#    check-template-location: true
+#    content-type: text/html
+#    expose-request-attributes: true
+#    expose-session-attributes: true
+#    request-context-attribute: request
+#    suffix: .ftl
+#    template-loader-path:
+#    - classpath:/templates
+#
+####服务名称(服务注册到eureka名称)
+#spring:
+#    application:
+#        name: app-mayikt-portal-web
+####服务注册到eureka地址
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://192.168.170.129:8080/eureka
+#  redis:
+#    host: 120.78.137.82
+#    port: 6379
+#    pool:
+#      max-idle: 100
+#      min-idle: 1
+#      max-active: 1000
+#      max-wait: -1
+#
+#
+#
+#spring:
+#  datasource:
+#    url: jdbc:mysql://127.0.0.1:3306/meite_member?autoReconnect=true&characterEncoding=UTF-8&useUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai
+#    username: root
+#    password: root
+#    driver-class-name: com.mysql.jdbc.Driver
+#    type: com.zaxxer.hikari.HikariDataSource

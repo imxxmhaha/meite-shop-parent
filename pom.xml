@@ -13,6 +13,7 @@
         <module>meite-shop-service-impl</module>
         <module>meite-shop-common</module>
         <module>meite-shop-api-dto</module>
+        <module>meite-shop-portal</module>
     </modules>
     <packaging>pom</packaging>
     
