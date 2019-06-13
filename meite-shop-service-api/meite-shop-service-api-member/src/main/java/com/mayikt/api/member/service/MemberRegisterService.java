@@ -2,6 +2,7 @@ package com.mayikt.api.member.service;
 
 import com.mayikt.common.base.BaseResponse;
 import com.mayikt.member.input.dto.UserInpDTO;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,6 +13,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @Api(tags = "会员注册接口")
+@FeignClient(value = "APP-MAYIKT-MEMBER")
 public interface MemberRegisterService {
 	/**
 	 * 用户注册接口

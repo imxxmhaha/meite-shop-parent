@@ -7,10 +7,7 @@ import com.mayikt.common.base.BaseApiService;
 import com.mayikt.common.base.BaseResponse;
 import com.mayikt.common.constants.Constants;
 import com.mayikt.common.core.transaction.RedisDataSoureceTransaction;
-import com.mayikt.common.core.utils.GenerateToken;
-import com.mayikt.common.core.utils.MD5Util;
-import com.mayikt.common.core.utils.RediskeyUtils;
-import com.mayikt.common.core.utils.SpringContextUtil;
+import com.mayikt.common.core.utils.*;
 import com.mayikt.member.dao.UserDao;
 import com.mayikt.member.dao.UserTokenDao;
 import com.mayikt.member.entity.UserEntity;
@@ -37,6 +34,8 @@ public class MemberLoginServiceImpl extends BaseApiService<JSONObject> implement
     @Autowired
     private MemberLoginHandle memberLoginHandle;
 
+    @Autowired
+    private RedisUtil redisUtil;
     /**
      * 手动事务工具类
      */
@@ -93,5 +92,22 @@ public class MemberLoginServiceImpl extends BaseApiService<JSONObject> implement
             return setResultError("系统错误!");
         }
         return setResultSuccess(tokenData);
+    }
+
+
+    @Override
+    public BaseResponse<JSONObject> delToken(String token) {
+        if (StringUtils.isEmpty(token)) {
+            return setResultError("token不能为空!");
+        }
+        Boolean flag = true;
+        try {
+             flag = memberLoginHandle.doDelKey(token);
+        } catch (Exception e) {
+            e.printStackTrace();
+            flag = false;
+        }
+
+        return flag ? setResultSuccess("删除成功") : setResultError("删除失败!");
     }
 }

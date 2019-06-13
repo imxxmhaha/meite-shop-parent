@@ -29,6 +29,26 @@
             <version>1.0-RELEASE</version>
         </dependency>
 
+        <!--引入腾讯联合登陆平台sdk-->
+        <dependency>
+            <groupId>com.tengxun</groupId>
+            <artifactId>sdk4J</artifactId>
+            <version>1.0</version>
+        </dependency>
 
+        <!--spring-session依赖开始-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+        </dependency>
+        <!--spring-session依赖结束-->
     </dependencies>
 </project>

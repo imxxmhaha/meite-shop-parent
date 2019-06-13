@@ -42,4 +42,9 @@ public class UserLoginInpDTO {
 	private String deviceInfor;
 	// 为什么一个接口单独定义一个 dto请求参数类 swagger 接口文档对称
 
+	/**
+	 * 腾讯开放平台ID
+	 */
+	@ApiModelProperty(value = "腾讯开放平台ID")
+	private String qqOpenId;
 }

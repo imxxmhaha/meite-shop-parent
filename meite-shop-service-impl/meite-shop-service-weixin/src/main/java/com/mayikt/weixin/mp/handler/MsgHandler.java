@@ -70,14 +70,20 @@ public class MsgHandler extends AbstractHandler {
         String fromContent = wxMessage.getContent();
         log.info("fromContent:" + fromContent);
         // 2.使用正则表达式验证消息是否为手机号码格式
-        if (RegexUtils.checkMobile(fromContent)){
+        if (RegexUtils.checkMobile(fromContent)) {
             // 2.1根据手机号码调用会员服务接口查询用户信息是否存在
-            BaseResponse<UserOutDTO> response = memberServiceFeign.existMobile(fromContent);
-            if(Constants.HTTP_RES_CODE_200.equals(response.getCode())){
-                return new TextBuilder().build("该手机号:"+fromContent+"已经存在", wxMessage, weixinService);
+            BaseResponse<UserOutDTO> response = null;
+            try {
+                response = memberServiceFeign.existMobile(fromContent);
+            } catch (Exception e) {
+                e.printStackTrace();
+                return new TextBuilder().build("服务器繁忙,请稍后再试", wxMessage, weixinService);
+            }
+            if (Constants.HTTP_RES_CODE_200.equals(response.getCode())) {
+                return new TextBuilder().build("该手机号:" + fromContent + "已经存在", wxMessage, weixinService);
             }
 
-            if(!Constants.HTTP_RES_CODE_EXISTMOBILE_202.equals(response.getCode())){
+            if (!Constants.HTTP_RES_CODE_EXISTMOBILE_202.equals(response.getCode())) {
                 return new TextBuilder().build(response.getMsg(), wxMessage, weixinService);
             }
             // 3.如果是手机号码格式的话,随机生成4位数字验证码
@@ -88,15 +94,15 @@ public class MsgHandler extends AbstractHandler {
             String content = String.format(registrationCodeMessage, registCode);
             return new TextBuilder().build(content, wxMessage, weixinService);
         }
-            // TODO 组装回复消息
-            // String content = "收到信息内容：" + JsonUtils.toJson(wxMessage);
+        // TODO 组装回复消息
+        // String content = "收到信息内容：" + JsonUtils.toJson(wxMessage);
         return new TextBuilder().build(defaultRegistrationCodeMessage, wxMessage, weixinService);
 
     }
 
     // 获取注册码
-    private int getRegistCode(){
-        int registCode = (int)(Math.random()*9000 +1000);
+    private int getRegistCode() {
+        int registCode = (int) (Math.random() * 9000 + 1000);
         return registCode;
     }
 

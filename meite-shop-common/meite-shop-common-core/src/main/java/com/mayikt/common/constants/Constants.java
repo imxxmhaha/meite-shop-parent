@@ -28,6 +28,7 @@ public interface Constants {
 	// 用户信息不存在
 	String HTTP_RES_CODE_EXISTMOBILE_202 = "202";
 
+	String HTTP_RES_CODE_NOTUSER_203 = "203";
 
 	// token
 	String MEMBER_TOKEN_KEYPREFIX = "mayikt:member:login_";
@@ -42,4 +43,6 @@ public interface Constants {
 
 	// 登陆超时时间 有效期 90天
 	Long MEMBRE_LOGIN_TOKEN_TIME = 77776000L;
+
+	String LOGIN_TYPE = "QQ_LOGIN";
 }

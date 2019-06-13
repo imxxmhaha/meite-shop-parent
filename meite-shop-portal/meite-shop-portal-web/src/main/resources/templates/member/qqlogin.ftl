@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>蚂蚁商城-登录</title>
+<title>蚂蚁商城-QQ关联</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" href="../res/layui/css/layui.css">
@@ -26,7 +26,7 @@
 				</span>
 			</div>
 			<div class="house-banner layui-form">
-				<a class="banner" href="index.html"> <img
+				<a class="banner" href="index"> <img
 					src="http://static.itmayiedu.com/12312312312312da.png" alt="家居商城">
 				</a>
 				<div class="layui-input-inline">
@@ -53,11 +53,19 @@
 
 
 	<div class="layui-fulid" id="house-login">
-		<form action="login" method="post">
+		<form action="qqJointLogin" method="post">
 			<div class="layui-form">
-				<p>手机号登录</p>
+				<p>
+					<img alt="" src="${avatarURL100}">
+				</p>
 
-				<div class="layui-input-block login">
+				<span style="margin-left: 15px; color: #ff662f;"> 您正在使用
+					QQ绑定蚂蚁课堂【已注册】账户</span>
+
+
+
+
+				<div class="layui-input-block login" style="margin-top: 25px;">
 					<i class="layui-icon layui-icon-username"></i> <input type="text"
 						required lay-verify="required" name="mobile"
 						value="${(loginVo.mobile)!''}" placeholder="请输入手机号码"
@@ -70,16 +78,15 @@
 						value="${(loginVo.password)!''}" placeholder="请输入密码"
 						class="layui-input">
 				</div>
-
-				<div class="layui-input-block getCode">
-					<input type="text" name="graphicCode" required lay-verify="required"
-						placeholder="请输入验证码" class="layui-input"> <img alt=""
-						src="getVerify" onclick="getVerify(this);"
-						style="border: 1px solid #e2e2e2;font-size: 18px;height: 48px;margin-top: -93px;width: 44%;background-color: #e8d6c0;margin-left: 166px;">
-				</div>
+				
+				
 				<span
 					style="color: red; font-size: 20px; font-weight: bold; font-family: '楷体', '楷体_GB2312';">${error!''}</span>
-				<button class="layui-btn"  style="margin-top: 5px;" lay-submit lay-filter="user-login">登录</button>
+				<button class="layui-btn" style="margin-top: 5px;" lay-submit
+					lay-filter="user-login">绑定</button>
+
+				<span style="margin-left: 25%; padding-top: 30px;"> <a
+					href="register" style="color: #009100;"> 【未注册】蚂蚁课堂账户？</a></span>
 			</div>
 	</div>
 	</form>
@@ -115,12 +122,9 @@
 			base : '../res/static/js/'
 		}).use('house');
 
-
-        //获取验证码
-        function getVerify(obj) {
-            obj.src = "getVerify?" + Math.random();
-        }
-
+		function getVerify(obj) {
+			obj.src = "getVerify?" + Math.random();
+		}
 	</script>
 
 </body>

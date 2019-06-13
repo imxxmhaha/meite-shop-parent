@@ -45,7 +45,7 @@ public class UserEntity {
 	 * 性别 0 男 1女
 	 */
 	@TableField("sex")
-	private char sex;
+	private Integer sex = 0;  // 默认为男
 	/**
 	 * 年龄
 	 */

@@ -56,7 +56,7 @@ public class MemberServiceImpl extends BaseApiService<UserOutDTO> implements Mem
         if (userEntity == null) {
             return setResultError(Constants.HTTP_RES_CODE_EXISTMOBILE_202, "用户不存在");
         }
-        UserOutDTO userOutDTO = MiteBeanUtils.doToDto(userEntity, UserOutDTO.class);
+        UserOutDTO userOutDTO = MiteBeanUtils.E2T(userEntity, UserOutDTO.class);
         // 注意需要将敏感数据进行脱敏
         //userEntity.setPassword(null);
         return setResultSuccess(userOutDTO);
@@ -81,7 +81,7 @@ public class MemberServiceImpl extends BaseApiService<UserOutDTO> implements Mem
             return setResultError("用户信息不存在!");
         }
         // 4.将Do转换为Dto
-        UserOutDTO doToDto = MiteBeanUtils.doToDto(userDo, UserOutDTO.class);
+        UserOutDTO doToDto = MiteBeanUtils.E2T(userDo, UserOutDTO.class);
         return setResultSuccess(doToDto);
     }
 }

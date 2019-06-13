@@ -10,6 +10,7 @@ import com.mayikt.common.core.utils.MiteBeanUtils;
 import com.mayikt.member.dao.UserDao;
 import com.mayikt.member.entity.UserEntity;
 import com.mayikt.member.input.dto.UserInpDTO;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,6 +22,7 @@ import com.alibaba.fastjson.JSONObject;
 
 
 @RestController
+@Slf4j
 public class MemberRegisterServiceImpl extends BaseApiService<JSONObject> implements MemberRegisterService {
 	@Autowired
 	private UserDao userDao;
@@ -30,10 +32,10 @@ public class MemberRegisterServiceImpl extends BaseApiService<JSONObject> implem
 	@Transactional
 	public BaseResponse<JSONObject> register(@RequestBody UserInpDTO userInpDTO, String registCode) {
 		// 1.参数验证
-		String userName = userInpDTO.getUserName();
-		if (StringUtils.isEmpty(userName)) {
-			return setResultError("用户名称不能为空!");
-		}
+		//String userName = userInpDTO.getUserName();
+		//if (StringUtils.isEmpty(userName)) {
+		//	return setResultError("用户名称不能为空!");
+		//}
 		String mobile = userInpDTO.getMobile();
 		if (StringUtils.isEmpty(mobile)) {
 			return setResultError("手机号码不能为空!");
@@ -50,10 +52,16 @@ public class MemberRegisterServiceImpl extends BaseApiService<JSONObject> implem
 		// 3.对用户的密码进行加密 // MD5 可以解密 暴力破解
 		String newPassword = MD5Util.MD5(password);
 		userInpDTO.setPassword(newPassword);
-		UserEntity userEntity = MiteBeanUtils.dtoToDo(userInpDTO, UserEntity.class);
+		UserEntity userEntity = MiteBeanUtils.E2T(userInpDTO, UserEntity.class);
 		// 4.调用数据库插入数据
-		Integer row = userDao.insert(userEntity);
-		return row > 0 ? setResultSuccess("注册成功") : setResultError("注册失败!");
+		try {
+			Integer row = userDao.insert(userEntity);
+			return row > 0 ? setResultSuccess("注册成功") : setResultError("注册失败!");
+		} catch (Exception e) {
+			e.printStackTrace();
+			log.error("插入数据库异常");
+			return setResultError("注册失败!");
+		}
 	}
 
 }
