@@ -1,0 +1,924 @@
+11326305 DEBUG [2019-06-13 07:15:32]   << "[\r][\n]"
+11326306 DEBUG [2019-06-13 07:15:32]  Receiving response: HTTP/1.1 200 OK
+11326306 DEBUG [2019-06-13 07:15:32]  << HTTP/1.1 200 OK
+11326306 DEBUG [2019-06-13 07:15:32]  << Server: Apache-Coyote/1.1
+11326306 DEBUG [2019-06-13 07:15:32]  << X-Content-Type-Options: nosniff
+11326306 DEBUG [2019-06-13 07:15:32]  << X-XSS-Protection: 1; mode=block
+11326306 DEBUG [2019-06-13 07:15:32]  << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+11326306 DEBUG [2019-06-13 07:15:32]  << Pragma: no-cache
+11326306 DEBUG [2019-06-13 07:15:32]  << Expires: 0
+11326306 DEBUG [2019-06-13 07:15:32]  << X-Frame-Options: SAMEORIGIN
+11326306 DEBUG [2019-06-13 07:15:32]  << Content-Encoding: gzip
+11326306 DEBUG [2019-06-13 07:15:32]  << Content-Type: application/json
+11326306 DEBUG [2019-06-13 07:15:32]  << Content-Length: 99
+11326306 DEBUG [2019-06-13 07:15:32]  << Date: Wed, 12 Jun 2019 23:15:31 GMT
+11326306 DEBUG [2019-06-13 07:15:32]  Connection can be kept alive indefinitely
+11326306 DEBUG [2019-06-13 07:15:32]   << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0xab]VJ,([0xc8][0xc9]LN,[0xc9][0xcc][0xcf]+V[0xb2][0xaa]V*K-*[0x6][0xb1][0xe3][0xe3]SRsJ[0x12][0x95][0xac][0x94][0xc][0x8d][0x8d]L[0x95]t@[\n]"
+11326307 DEBUG [2019-06-13 07:15:32]   << "[0x81][0x82][0x19][0x89][0xc5][0x19][0xc9][0xf9])[0xa9]@[0xf1][0xe0][0x10][0xc7][0xa0][0x10]O?[0xf7]x[0xc3][0xf8][0xd0][0x80]x[0x93]x[0x88][0x1a][0x98]aJV[0xd1][0xb1][0xb5][0xb5][0x0][0xea][0x9c][0xab][0xf6]`[0x0][0x0][0x0]"
+11326307 DEBUG [2019-06-13 07:15:32]  Released connection is reusable.
+11326307 DEBUG [2019-06-13 07:15:32]  Releasing connection [{}->http://192.168.170.129:8080][null]
+11326307 DEBUG [2019-06-13 07:15:32]  Pooling connection [{}->http://192.168.170.129:8080][null]; keep alive indefinitely
+11326307 DEBUG [2019-06-13 07:15:32]  Notifying no-one, there are no waiting threads
+11352819 DEBUG [2019-06-13 07:15:58]  Closing connections idle longer than 30000 SECONDS
+11352819 DEBUG [2019-06-13 07:15:58]  Closing connections idle longer than 30000 SECONDS
+11353015 DEBUG [2019-06-13 07:15:58]  Closing connections idle longer than -1 SECONDS
+11353015 DEBUG [2019-06-13 07:15:58]  Closing connections idle longer than 0 SECONDS
+11353015 DEBUG [2019-06-13 07:15:58]  Closing connection last used @ Thu Jun 13 07:15:32 CST 2019
+11353015 DEBUG [2019-06-13 07:15:58]  Deleting connection [{}->http://192.168.170.129:8080][null]
+11353015 DEBUG [2019-06-13 07:15:58]  Connection 0.0.0.0:64583<->192.168.170.129:8080 closed
+11356028 DEBUG [2019-06-13 07:16:01]  Get connection: {}->http://192.168.170.129:8080, timeout = 5000
+11356028 DEBUG [2019-06-13 07:16:01]  [{}->http://192.168.170.129:8080] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+11356028 DEBUG [2019-06-13 07:16:01]  No free connections [{}->http://192.168.170.129:8080][null]
+11356028 DEBUG [2019-06-13 07:16:01]  Available capacity: 50 out of 50 [{}->http://192.168.170.129:8080][null]
+11356028 DEBUG [2019-06-13 07:16:01]  Creating new connection [{}->http://192.168.170.129:8080]
+11356029 DEBUG [2019-06-13 07:16:01]  Connecting to 192.168.170.129:8080
+11356030 DEBUG [2019-06-13 07:16:01]  CookieSpec selected: default
+11356030 DEBUG [2019-06-13 07:16:01]  Auth cache not set in the context
+11356030 DEBUG [2019-06-13 07:16:01]  Target auth state: UNCHALLENGED
+11356030 DEBUG [2019-06-13 07:16:01]  Proxy auth state: UNCHALLENGED
+11356030 DEBUG [2019-06-13 07:16:01]  Attempt 1 to execute request
+11356030 DEBUG [2019-06-13 07:16:01]  Sending request: PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1
+11356030 DEBUG [2019-06-13 07:16:01]   >> "PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1[\r][\n]"
+11356030 DEBUG [2019-06-13 07:16:01]   >> "DiscoveryIdentity-Name: DefaultClient[\r][\n]"
+11356030 DEBUG [2019-06-13 07:16:01]   >> "DiscoveryIdentity-Version: 1.4[\r][\n]"
+11356030 DEBUG [2019-06-13 07:16:01]   >> "DiscoveryIdentity-Id: 192.168.170.1[\r][\n]"
+11356030 DEBUG [2019-06-13 07:16:01]   >> "Accept-Encoding: gzip[\r][\n]"
+11356030 DEBUG [2019-06-13 07:16:01]   >> "Content-Length: 0[\r][\n]"
+11356030 DEBUG [2019-06-13 07:16:01]   >> "Host: 192.168.170.129:8080[\r][\n]"
+11356030 DEBUG [2019-06-13 07:16:01]   >> "Connection: Keep-Alive[\r][\n]"
+11356030 DEBUG [2019-06-13 07:16:01]   >> "User-Agent: Java-EurekaClient/v1.8.6[\r][\n]"
+11356030 DEBUG [2019-06-13 07:16:01]   >> "[\r][\n]"
+11356030 DEBUG [2019-06-13 07:16:01]  >> PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1
+11356030 DEBUG [2019-06-13 07:16:01]  >> DiscoveryIdentity-Name: DefaultClient
+11356031 DEBUG [2019-06-13 07:16:01]  >> DiscoveryIdentity-Version: 1.4
+11356031 DEBUG [2019-06-13 07:16:01]  >> DiscoveryIdentity-Id: 192.168.170.1
+11356031 DEBUG [2019-06-13 07:16:01]  >> Accept-Encoding: gzip
+11356031 DEBUG [2019-06-13 07:16:01]  >> Content-Length: 0
+11356031 DEBUG [2019-06-13 07:16:01]  >> Host: 192.168.170.129:8080
+11356031 DEBUG [2019-06-13 07:16:01]  >> Connection: Keep-Alive
+11356031 DEBUG [2019-06-13 07:16:01]  >> User-Agent: Java-EurekaClient/v1.8.6
+11356032 DEBUG [2019-06-13 07:16:01]   << "HTTP/1.1 200 OK[\r][\n]"
+11356033 DEBUG [2019-06-13 07:16:01]   << "Server: Apache-Coyote/1.1[\r][\n]"
+11356033 DEBUG [2019-06-13 07:16:01]   << "X-Content-Type-Options: nosniff[\r][\n]"
+11356033 DEBUG [2019-06-13 07:16:01]   << "X-XSS-Protection: 1; mode=block[\r][\n]"
+11356033 DEBUG [2019-06-13 07:16:01]   << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+11356033 DEBUG [2019-06-13 07:16:01]   << "Pragma: no-cache[\r][\n]"
+11356033 DEBUG [2019-06-13 07:16:01]   << "Expires: 0[\r][\n]"
+11356033 DEBUG [2019-06-13 07:16:01]   << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+11356033 DEBUG [2019-06-13 07:16:01]   << "Content-Type: application/xml[\r][\n]"
+11356033 DEBUG [2019-06-13 07:16:01]   << "Content-Length: 0[\r][\n]"
+11356033 DEBUG [2019-06-13 07:16:01]   << "Date: Wed, 12 Jun 2019 23:16:01 GMT[\r][\n]"
+11356033 DEBUG [2019-06-13 07:16:01]   << "[\r][\n]"
+11356033 DEBUG [2019-06-13 07:16:01]  Receiving response: HTTP/1.1 200 OK
+11356033 DEBUG [2019-06-13 07:16:01]  << HTTP/1.1 200 OK
+11356033 DEBUG [2019-06-13 07:16:01]  << Server: Apache-Coyote/1.1
+11356033 DEBUG [2019-06-13 07:16:01]  << X-Content-Type-Options: nosniff
+11356033 DEBUG [2019-06-13 07:16:01]  << X-XSS-Protection: 1; mode=block
+11356033 DEBUG [2019-06-13 07:16:01]  << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+11356033 DEBUG [2019-06-13 07:16:01]  << Pragma: no-cache
+11356033 DEBUG [2019-06-13 07:16:01]  << Expires: 0
+11356033 DEBUG [2019-06-13 07:16:01]  << X-Frame-Options: SAMEORIGIN
+11356033 DEBUG [2019-06-13 07:16:01]  << Content-Type: application/xml
+11356033 DEBUG [2019-06-13 07:16:01]  << Content-Length: 0
+11356033 DEBUG [2019-06-13 07:16:01]  << Date: Wed, 12 Jun 2019 23:16:01 GMT
+11356033 DEBUG [2019-06-13 07:16:01]  Connection can be kept alive indefinitely
+11356033 DEBUG [2019-06-13 07:16:01]  Released connection is reusable.
+11356033 DEBUG [2019-06-13 07:16:01]  Releasing connection [{}->http://192.168.170.129:8080][null]
+11356033 DEBUG [2019-06-13 07:16:01]  Pooling connection [{}->http://192.168.170.129:8080][null]; keep alive indefinitely
+11356033 DEBUG [2019-06-13 07:16:01]  Notifying no-one, there are no waiting threads
+11356308 DEBUG [2019-06-13 07:16:02]  Get connection: {}->http://192.168.170.129:8080, timeout = 5000
+11356308 DEBUG [2019-06-13 07:16:02]  [{}->http://192.168.170.129:8080] total kept alive: 1, total issued: 0, total allocated: 1 out of 200
+11356308 DEBUG [2019-06-13 07:16:02]  Getting free connection [{}->http://192.168.170.129:8080][null]
+11356308 DEBUG [2019-06-13 07:16:02]  Stale connection check
+11356310 DEBUG [2019-06-13 07:16:02]  CookieSpec selected: default
+11356310 DEBUG [2019-06-13 07:16:02]  Auth cache not set in the context
+11356310 DEBUG [2019-06-13 07:16:02]  Target auth state: UNCHALLENGED
+11356310 DEBUG [2019-06-13 07:16:02]  Proxy auth state: UNCHALLENGED
+11356310 DEBUG [2019-06-13 07:16:02]  Attempt 1 to execute request
+11356310 DEBUG [2019-06-13 07:16:02]  Sending request: GET /eureka/apps/delta HTTP/1.1
+11356310 DEBUG [2019-06-13 07:16:02]   >> "GET /eureka/apps/delta HTTP/1.1[\r][\n]"
+11356310 DEBUG [2019-06-13 07:16:02]   >> "Accept: application/json[\r][\n]"
+11356310 DEBUG [2019-06-13 07:16:02]   >> "DiscoveryIdentity-Name: DefaultClient[\r][\n]"
+11356310 DEBUG [2019-06-13 07:16:02]   >> "DiscoveryIdentity-Version: 1.4[\r][\n]"
+11356310 DEBUG [2019-06-13 07:16:02]   >> "DiscoveryIdentity-Id: 192.168.170.1[\r][\n]"
+11356310 DEBUG [2019-06-13 07:16:02]   >> "Accept-Encoding: gzip[\r][\n]"
+11356310 DEBUG [2019-06-13 07:16:02]   >> "Host: 192.168.170.129:8080[\r][\n]"
+11356310 DEBUG [2019-06-13 07:16:02]   >> "Connection: Keep-Alive[\r][\n]"
+11356310 DEBUG [2019-06-13 07:16:02]   >> "User-Agent: Java-EurekaClient/v1.8.6[\r][\n]"
+11356310 DEBUG [2019-06-13 07:16:02]   >> "[\r][\n]"
+11356310 DEBUG [2019-06-13 07:16:02]  >> GET /eureka/apps/delta HTTP/1.1
+11356310 DEBUG [2019-06-13 07:16:02]  >> Accept: application/json
+11356310 DEBUG [2019-06-13 07:16:02]  >> DiscoveryIdentity-Name: DefaultClient
+11356310 DEBUG [2019-06-13 07:16:02]  >> DiscoveryIdentity-Version: 1.4
+11356310 DEBUG [2019-06-13 07:16:02]  >> DiscoveryIdentity-Id: 192.168.170.1
+11356310 DEBUG [2019-06-13 07:16:02]  >> Accept-Encoding: gzip
+11356310 DEBUG [2019-06-13 07:16:02]  >> Host: 192.168.170.129:8080
+11356310 DEBUG [2019-06-13 07:16:02]  >> Connection: Keep-Alive
+11356310 DEBUG [2019-06-13 07:16:02]  >> User-Agent: Java-EurekaClient/v1.8.6
+11356312 DEBUG [2019-06-13 07:16:02]   << "HTTP/1.1 200 OK[\r][\n]"
+11356312 DEBUG [2019-06-13 07:16:02]   << "Server: Apache-Coyote/1.1[\r][\n]"
+11356312 DEBUG [2019-06-13 07:16:02]   << "X-Content-Type-Options: nosniff[\r][\n]"
+11356312 DEBUG [2019-06-13 07:16:02]   << "X-XSS-Protection: 1; mode=block[\r][\n]"
+11356312 DEBUG [2019-06-13 07:16:02]   << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+11356312 DEBUG [2019-06-13 07:16:02]   << "Pragma: no-cache[\r][\n]"
+11356312 DEBUG [2019-06-13 07:16:02]   << "Expires: 0[\r][\n]"
+11356312 DEBUG [2019-06-13 07:16:02]   << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+11356312 DEBUG [2019-06-13 07:16:02]   << "Content-Encoding: gzip[\r][\n]"
+11356312 DEBUG [2019-06-13 07:16:02]   << "Content-Type: application/json[\r][\n]"
+11356312 DEBUG [2019-06-13 07:16:02]   << "Content-Length: 99[\r][\n]"
+11356312 DEBUG [2019-06-13 07:16:02]   << "Date: Wed, 12 Jun 2019 23:16:01 GMT[\r][\n]"
+11356312 DEBUG [2019-06-13 07:16:02]   << "[\r][\n]"
+11356312 DEBUG [2019-06-13 07:16:02]  Receiving response: HTTP/1.1 200 OK
+11356312 DEBUG [2019-06-13 07:16:02]  << HTTP/1.1 200 OK
+11356312 DEBUG [2019-06-13 07:16:02]  << Server: Apache-Coyote/1.1
+11356312 DEBUG [2019-06-13 07:16:02]  << X-Content-Type-Options: nosniff
+11356312 DEBUG [2019-06-13 07:16:02]  << X-XSS-Protection: 1; mode=block
+11356312 DEBUG [2019-06-13 07:16:02]  << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+11356312 DEBUG [2019-06-13 07:16:02]  << Pragma: no-cache
+11356312 DEBUG [2019-06-13 07:16:02]  << Expires: 0
+11356312 DEBUG [2019-06-13 07:16:02]  << X-Frame-Options: SAMEORIGIN
+11356312 DEBUG [2019-06-13 07:16:02]  << Content-Encoding: gzip
+11356313 DEBUG [2019-06-13 07:16:02]  << Content-Type: application/json
+11356313 DEBUG [2019-06-13 07:16:02]  << Content-Length: 99
+11356313 DEBUG [2019-06-13 07:16:02]  << Date: Wed, 12 Jun 2019 23:16:01 GMT
+11356313 DEBUG [2019-06-13 07:16:02]  Connection can be kept alive indefinitely
+11356313 DEBUG [2019-06-13 07:16:02]   << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0xab]VJ,([0xc8][0xc9]LN,[0xc9][0xcc][0xcf]+V[0xb2][0xaa]V*K-*[0x6][0xb1][0xe3][0xe3]SRsJ[0x12][0x95][0xac][0x94][0xc][0x8d][0x8d]L[0x95]t@[\n]"
+11356313 DEBUG [2019-06-13 07:16:02]   << "[0x81][0x82][0x19][0x89][0xc5][0x19][0xc9][0xf9])[0xa9]@[0xf1][0xe0][0x10][0xc7][0xa0][0x10]O?[0xf7]x[0xc3][0xf8][0xd0][0x80]x[0x93]x[0x88][0x1a][0x98]aJV[0xd1][0xb1][0xb5][0xb5][0x0][0xea][0x9c][0xab][0xf6]`[0x0][0x0][0x0]"
+11356313 DEBUG [2019-06-13 07:16:02]  Released connection is reusable.
+11356313 DEBUG [2019-06-13 07:16:02]  Releasing connection [{}->http://192.168.170.129:8080][null]
+11356313 DEBUG [2019-06-13 07:16:02]  Pooling connection [{}->http://192.168.170.129:8080][null]; keep alive indefinitely
+11356313 DEBUG [2019-06-13 07:16:02]  Notifying no-one, there are no waiting threads
+11382819 DEBUG [2019-06-13 07:16:28]  Closing connections idle longer than 30000 SECONDS
+11382819 DEBUG [2019-06-13 07:16:28]  Closing connections idle longer than 30000 SECONDS
+11383016 DEBUG [2019-06-13 07:16:28]  Closing connections idle longer than -1 SECONDS
+11383016 DEBUG [2019-06-13 07:16:28]  Closing connections idle longer than 0 SECONDS
+11383016 DEBUG [2019-06-13 07:16:28]  Closing connection last used @ Thu Jun 13 07:16:02 CST 2019
+11383016 DEBUG [2019-06-13 07:16:28]  Deleting connection [{}->http://192.168.170.129:8080][null]
+11383016 DEBUG [2019-06-13 07:16:28]  Connection 0.0.0.0:64949<->192.168.170.129:8080 closed
+11386034 DEBUG [2019-06-13 07:16:31]  Get connection: {}->http://192.168.170.129:8080, timeout = 5000
+11386034 DEBUG [2019-06-13 07:16:31]  [{}->http://192.168.170.129:8080] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+11386034 DEBUG [2019-06-13 07:16:31]  No free connections [{}->http://192.168.170.129:8080][null]
+11386034 DEBUG [2019-06-13 07:16:31]  Available capacity: 50 out of 50 [{}->http://192.168.170.129:8080][null]
+11386034 DEBUG [2019-06-13 07:16:31]  Creating new connection [{}->http://192.168.170.129:8080]
+11386035 DEBUG [2019-06-13 07:16:31]  Connecting to 192.168.170.129:8080
+11386035 DEBUG [2019-06-13 07:16:31]  CookieSpec selected: default
+11386036 DEBUG [2019-06-13 07:16:31]  Auth cache not set in the context
+11386036 DEBUG [2019-06-13 07:16:31]  Target auth state: UNCHALLENGED
+11386036 DEBUG [2019-06-13 07:16:31]  Proxy auth state: UNCHALLENGED
+11386036 DEBUG [2019-06-13 07:16:31]  Attempt 1 to execute request
+11386036 DEBUG [2019-06-13 07:16:31]  Sending request: PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1
+11386036 DEBUG [2019-06-13 07:16:31]   >> "PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1[\r][\n]"
+11386036 DEBUG [2019-06-13 07:16:31]   >> "DiscoveryIdentity-Name: DefaultClient[\r][\n]"
+11386036 DEBUG [2019-06-13 07:16:31]   >> "DiscoveryIdentity-Version: 1.4[\r][\n]"
+11386036 DEBUG [2019-06-13 07:16:31]   >> "DiscoveryIdentity-Id: 192.168.170.1[\r][\n]"
+11386036 DEBUG [2019-06-13 07:16:31]   >> "Accept-Encoding: gzip[\r][\n]"
+11386036 DEBUG [2019-06-13 07:16:31]   >> "Content-Length: 0[\r][\n]"
+11386036 DEBUG [2019-06-13 07:16:31]   >> "Host: 192.168.170.129:8080[\r][\n]"
+11386036 DEBUG [2019-06-13 07:16:31]   >> "Connection: Keep-Alive[\r][\n]"
+11386036 DEBUG [2019-06-13 07:16:31]   >> "User-Agent: Java-EurekaClient/v1.8.6[\r][\n]"
+11386036 DEBUG [2019-06-13 07:16:31]   >> "[\r][\n]"
+11386036 DEBUG [2019-06-13 07:16:31]  >> PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1
+11386036 DEBUG [2019-06-13 07:16:31]  >> DiscoveryIdentity-Name: DefaultClient
+11386036 DEBUG [2019-06-13 07:16:31]  >> DiscoveryIdentity-Version: 1.4
+11386036 DEBUG [2019-06-13 07:16:31]  >> DiscoveryIdentity-Id: 192.168.170.1
+11386036 DEBUG [2019-06-13 07:16:31]  >> Accept-Encoding: gzip
+11386036 DEBUG [2019-06-13 07:16:31]  >> Content-Length: 0
+11386036 DEBUG [2019-06-13 07:16:31]  >> Host: 192.168.170.129:8080
+11386036 DEBUG [2019-06-13 07:16:31]  >> Connection: Keep-Alive
+11386036 DEBUG [2019-06-13 07:16:31]  >> User-Agent: Java-EurekaClient/v1.8.6
+11386038 DEBUG [2019-06-13 07:16:31]   << "HTTP/1.1 200 OK[\r][\n]"
+11386038 DEBUG [2019-06-13 07:16:31]   << "Server: Apache-Coyote/1.1[\r][\n]"
+11386038 DEBUG [2019-06-13 07:16:31]   << "X-Content-Type-Options: nosniff[\r][\n]"
+11386038 DEBUG [2019-06-13 07:16:31]   << "X-XSS-Protection: 1; mode=block[\r][\n]"
+11386038 DEBUG [2019-06-13 07:16:31]   << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+11386038 DEBUG [2019-06-13 07:16:31]   << "Pragma: no-cache[\r][\n]"
+11386038 DEBUG [2019-06-13 07:16:31]   << "Expires: 0[\r][\n]"
+11386038 DEBUG [2019-06-13 07:16:31]   << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+11386038 DEBUG [2019-06-13 07:16:31]   << "Content-Type: application/xml[\r][\n]"
+11386038 DEBUG [2019-06-13 07:16:31]   << "Content-Length: 0[\r][\n]"
+11386038 DEBUG [2019-06-13 07:16:31]   << "Date: Wed, 12 Jun 2019 23:16:32 GMT[\r][\n]"
+11386038 DEBUG [2019-06-13 07:16:31]   << "[\r][\n]"
+11386038 DEBUG [2019-06-13 07:16:31]  Receiving response: HTTP/1.1 200 OK
+11386038 DEBUG [2019-06-13 07:16:31]  << HTTP/1.1 200 OK
+11386038 DEBUG [2019-06-13 07:16:31]  << Server: Apache-Coyote/1.1
+11386038 DEBUG [2019-06-13 07:16:31]  << X-Content-Type-Options: nosniff
+11386038 DEBUG [2019-06-13 07:16:31]  << X-XSS-Protection: 1; mode=block
+11386038 DEBUG [2019-06-13 07:16:31]  << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+11386038 DEBUG [2019-06-13 07:16:31]  << Pragma: no-cache
+11386038 DEBUG [2019-06-13 07:16:31]  << Expires: 0
+11386038 DEBUG [2019-06-13 07:16:31]  << X-Frame-Options: SAMEORIGIN
+11386038 DEBUG [2019-06-13 07:16:31]  << Content-Type: application/xml
+11386038 DEBUG [2019-06-13 07:16:31]  << Content-Length: 0
+11386038 DEBUG [2019-06-13 07:16:31]  << Date: Wed, 12 Jun 2019 23:16:32 GMT
+11386038 DEBUG [2019-06-13 07:16:31]  Connection can be kept alive indefinitely
+11386038 DEBUG [2019-06-13 07:16:31]  Released connection is reusable.
+11386038 DEBUG [2019-06-13 07:16:31]  Releasing connection [{}->http://192.168.170.129:8080][null]
+11386039 DEBUG [2019-06-13 07:16:31]  Pooling connection [{}->http://192.168.170.129:8080][null]; keep alive indefinitely
+11386039 DEBUG [2019-06-13 07:16:31]  Notifying no-one, there are no waiting threads
+11386313 DEBUG [2019-06-13 07:16:32]  Get connection: {}->http://192.168.170.129:8080, timeout = 5000
+11386314 DEBUG [2019-06-13 07:16:32]  [{}->http://192.168.170.129:8080] total kept alive: 1, total issued: 0, total allocated: 1 out of 200
+11386314 DEBUG [2019-06-13 07:16:32]  Getting free connection [{}->http://192.168.170.129:8080][null]
+11386314 DEBUG [2019-06-13 07:16:32]  Stale connection check
+11386316 DEBUG [2019-06-13 07:16:32]  CookieSpec selected: default
+11386317 DEBUG [2019-06-13 07:16:32]  Auth cache not set in the context
+11386317 DEBUG [2019-06-13 07:16:32]  Target auth state: UNCHALLENGED
+11386317 DEBUG [2019-06-13 07:16:32]  Proxy auth state: UNCHALLENGED
+11386317 DEBUG [2019-06-13 07:16:32]  Attempt 1 to execute request
+11386317 DEBUG [2019-06-13 07:16:32]  Sending request: GET /eureka/apps/delta HTTP/1.1
+11386317 DEBUG [2019-06-13 07:16:32]   >> "GET /eureka/apps/delta HTTP/1.1[\r][\n]"
+11386317 DEBUG [2019-06-13 07:16:32]   >> "Accept: application/json[\r][\n]"
+11386317 DEBUG [2019-06-13 07:16:32]   >> "DiscoveryIdentity-Name: DefaultClient[\r][\n]"
+11386317 DEBUG [2019-06-13 07:16:32]   >> "DiscoveryIdentity-Version: 1.4[\r][\n]"
+11386317 DEBUG [2019-06-13 07:16:32]   >> "DiscoveryIdentity-Id: 192.168.170.1[\r][\n]"
+11386317 DEBUG [2019-06-13 07:16:32]   >> "Accept-Encoding: gzip[\r][\n]"
+11386317 DEBUG [2019-06-13 07:16:32]   >> "Host: 192.168.170.129:8080[\r][\n]"
+11386317 DEBUG [2019-06-13 07:16:32]   >> "Connection: Keep-Alive[\r][\n]"
+11386317 DEBUG [2019-06-13 07:16:32]   >> "User-Agent: Java-EurekaClient/v1.8.6[\r][\n]"
+11386317 DEBUG [2019-06-13 07:16:32]   >> "[\r][\n]"
+11386317 DEBUG [2019-06-13 07:16:32]  >> GET /eureka/apps/delta HTTP/1.1
+11386317 DEBUG [2019-06-13 07:16:32]  >> Accept: application/json
+11386317 DEBUG [2019-06-13 07:16:32]  >> DiscoveryIdentity-Name: DefaultClient
+11386317 DEBUG [2019-06-13 07:16:32]  >> DiscoveryIdentity-Version: 1.4
+11386317 DEBUG [2019-06-13 07:16:32]  >> DiscoveryIdentity-Id: 192.168.170.1
+11386317 DEBUG [2019-06-13 07:16:32]  >> Accept-Encoding: gzip
+11386317 DEBUG [2019-06-13 07:16:32]  >> Host: 192.168.170.129:8080
+11386317 DEBUG [2019-06-13 07:16:32]  >> Connection: Keep-Alive
+11386317 DEBUG [2019-06-13 07:16:32]  >> User-Agent: Java-EurekaClient/v1.8.6
+11386320 DEBUG [2019-06-13 07:16:32]   << "HTTP/1.1 200 OK[\r][\n]"
+11386321 DEBUG [2019-06-13 07:16:32]   << "Server: Apache-Coyote/1.1[\r][\n]"
+11386321 DEBUG [2019-06-13 07:16:32]   << "X-Content-Type-Options: nosniff[\r][\n]"
+11386321 DEBUG [2019-06-13 07:16:32]   << "X-XSS-Protection: 1; mode=block[\r][\n]"
+11386321 DEBUG [2019-06-13 07:16:32]   << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+11386321 DEBUG [2019-06-13 07:16:32]   << "Pragma: no-cache[\r][\n]"
+11386321 DEBUG [2019-06-13 07:16:32]   << "Expires: 0[\r][\n]"
+11386321 DEBUG [2019-06-13 07:16:32]   << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+11386321 DEBUG [2019-06-13 07:16:32]   << "Content-Encoding: gzip[\r][\n]"
+11386321 DEBUG [2019-06-13 07:16:32]   << "Content-Type: application/json[\r][\n]"
+11386321 DEBUG [2019-06-13 07:16:32]   << "Content-Length: 99[\r][\n]"
+11386321 DEBUG [2019-06-13 07:16:32]   << "Date: Wed, 12 Jun 2019 23:16:32 GMT[\r][\n]"
+11386321 DEBUG [2019-06-13 07:16:32]   << "[\r][\n]"
+11386321 DEBUG [2019-06-13 07:16:32]  Receiving response: HTTP/1.1 200 OK
+11386321 DEBUG [2019-06-13 07:16:32]  << HTTP/1.1 200 OK
+11386321 DEBUG [2019-06-13 07:16:32]  << Server: Apache-Coyote/1.1
+11386321 DEBUG [2019-06-13 07:16:32]  << X-Content-Type-Options: nosniff
+11386321 DEBUG [2019-06-13 07:16:32]  << X-XSS-Protection: 1; mode=block
+11386321 DEBUG [2019-06-13 07:16:32]  << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+11386321 DEBUG [2019-06-13 07:16:32]  << Pragma: no-cache
+11386321 DEBUG [2019-06-13 07:16:32]  << Expires: 0
+11386321 DEBUG [2019-06-13 07:16:32]  << X-Frame-Options: SAMEORIGIN
+11386321 DEBUG [2019-06-13 07:16:32]  << Content-Encoding: gzip
+11386321 DEBUG [2019-06-13 07:16:32]  << Content-Type: application/json
+11386321 DEBUG [2019-06-13 07:16:32]  << Content-Length: 99
+11386321 DEBUG [2019-06-13 07:16:32]  << Date: Wed, 12 Jun 2019 23:16:32 GMT
+11386322 DEBUG [2019-06-13 07:16:32]  Connection can be kept alive indefinitely
+11386322 DEBUG [2019-06-13 07:16:32]   << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0xab]VJ,([0xc8][0xc9]LN,[0xc9][0xcc][0xcf]+V[0xb2][0xaa]V*K-*[0x6][0xb1][0xe3][0xe3]SRsJ[0x12][0x95][0xac][0x94][0xc][0x8d][0x8d]L[0x95]t@[\n]"
+11386322 DEBUG [2019-06-13 07:16:32]   << "[0x81][0x82][0x19][0x89][0xc5][0x19][0xc9][0xf9])[0xa9]@[0xf1][0xe0][0x10][0xc7][0xa0][0x10]O?[0xf7]x[0xc3][0xf8][0xd0][0x80]x[0x93]x[0x88][0x1a][0x98]aJV[0xd1][0xb1][0xb5][0xb5][0x0][0xea][0x9c][0xab][0xf6]`[0x0][0x0][0x0]"
+11386322 DEBUG [2019-06-13 07:16:32]  Released connection is reusable.
+11386322 DEBUG [2019-06-13 07:16:32]  Releasing connection [{}->http://192.168.170.129:8080][null]
+11386322 DEBUG [2019-06-13 07:16:32]  Pooling connection [{}->http://192.168.170.129:8080][null]; keep alive indefinitely
+11386322 DEBUG [2019-06-13 07:16:32]  Notifying no-one, there are no waiting threads
+11412819 DEBUG [2019-06-13 07:16:58]  Closing connections idle longer than 30000 SECONDS
+11412819 DEBUG [2019-06-13 07:16:58]  Closing connections idle longer than 30000 SECONDS
+11413017 DEBUG [2019-06-13 07:16:58]  Closing connections idle longer than -1 SECONDS
+11413017 DEBUG [2019-06-13 07:16:58]  Closing connections idle longer than 0 SECONDS
+11413017 DEBUG [2019-06-13 07:16:58]  Closing connection last used @ Thu Jun 13 07:16:32 CST 2019
+11413017 DEBUG [2019-06-13 07:16:58]  Deleting connection [{}->http://192.168.170.129:8080][null]
+11413017 DEBUG [2019-06-13 07:16:58]  Connection 0.0.0.0:65352<->192.168.170.129:8080 closed
+11416040 DEBUG [2019-06-13 07:17:01]  Get connection: {}->http://192.168.170.129:8080, timeout = 5000
+11416040 DEBUG [2019-06-13 07:17:01]  [{}->http://192.168.170.129:8080] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+11416040 DEBUG [2019-06-13 07:17:01]  No free connections [{}->http://192.168.170.129:8080][null]
+11416040 DEBUG [2019-06-13 07:17:01]  Available capacity: 50 out of 50 [{}->http://192.168.170.129:8080][null]
+11416040 DEBUG [2019-06-13 07:17:01]  Creating new connection [{}->http://192.168.170.129:8080]
+11416040 DEBUG [2019-06-13 07:17:01]  Connecting to 192.168.170.129:8080
+11416040 DEBUG [2019-06-13 07:17:01]  CookieSpec selected: default
+11416040 DEBUG [2019-06-13 07:17:01]  Auth cache not set in the context
+11416040 DEBUG [2019-06-13 07:17:01]  Target auth state: UNCHALLENGED
+11416040 DEBUG [2019-06-13 07:17:01]  Proxy auth state: UNCHALLENGED
+11416040 DEBUG [2019-06-13 07:17:01]  Attempt 1 to execute request
+11416040 DEBUG [2019-06-13 07:17:01]  Sending request: PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1
+11416040 DEBUG [2019-06-13 07:17:01]   >> "PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1[\r][\n]"
+11416040 DEBUG [2019-06-13 07:17:01]   >> "DiscoveryIdentity-Name: DefaultClient[\r][\n]"
+11416040 DEBUG [2019-06-13 07:17:01]   >> "DiscoveryIdentity-Version: 1.4[\r][\n]"
+11416040 DEBUG [2019-06-13 07:17:01]   >> "DiscoveryIdentity-Id: 192.168.170.1[\r][\n]"
+11416040 DEBUG [2019-06-13 07:17:01]   >> "Accept-Encoding: gzip[\r][\n]"
+11416040 DEBUG [2019-06-13 07:17:01]   >> "Content-Length: 0[\r][\n]"
+11416040 DEBUG [2019-06-13 07:17:01]   >> "Host: 192.168.170.129:8080[\r][\n]"
+11416040 DEBUG [2019-06-13 07:17:01]   >> "Connection: Keep-Alive[\r][\n]"
+11416040 DEBUG [2019-06-13 07:17:01]   >> "User-Agent: Java-EurekaClient/v1.8.6[\r][\n]"
+11416040 DEBUG [2019-06-13 07:17:01]   >> "[\r][\n]"
+11416040 DEBUG [2019-06-13 07:17:01]  >> PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1
+11416040 DEBUG [2019-06-13 07:17:01]  >> DiscoveryIdentity-Name: DefaultClient
+11416041 DEBUG [2019-06-13 07:17:01]  >> DiscoveryIdentity-Version: 1.4
+11416041 DEBUG [2019-06-13 07:17:01]  >> DiscoveryIdentity-Id: 192.168.170.1
+11416041 DEBUG [2019-06-13 07:17:01]  >> Accept-Encoding: gzip
+11416041 DEBUG [2019-06-13 07:17:01]  >> Content-Length: 0
+11416041 DEBUG [2019-06-13 07:17:01]  >> Host: 192.168.170.129:8080
+11416041 DEBUG [2019-06-13 07:17:01]  >> Connection: Keep-Alive
+11416041 DEBUG [2019-06-13 07:17:01]  >> User-Agent: Java-EurekaClient/v1.8.6
+11416041 DEBUG [2019-06-13 07:17:01]   << "HTTP/1.1 200 OK[\r][\n]"
+11416042 DEBUG [2019-06-13 07:17:01]   << "Server: Apache-Coyote/1.1[\r][\n]"
+11416042 DEBUG [2019-06-13 07:17:01]   << "X-Content-Type-Options: nosniff[\r][\n]"
+11416042 DEBUG [2019-06-13 07:17:01]   << "X-XSS-Protection: 1; mode=block[\r][\n]"
+11416042 DEBUG [2019-06-13 07:17:01]   << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+11416042 DEBUG [2019-06-13 07:17:01]   << "Pragma: no-cache[\r][\n]"
+11416042 DEBUG [2019-06-13 07:17:01]   << "Expires: 0[\r][\n]"
+11416042 DEBUG [2019-06-13 07:17:01]   << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+11416042 DEBUG [2019-06-13 07:17:01]   << "Content-Type: application/xml[\r][\n]"
+11416042 DEBUG [2019-06-13 07:17:01]   << "Content-Length: 0[\r][\n]"
+11416042 DEBUG [2019-06-13 07:17:01]   << "Date: Wed, 12 Jun 2019 23:17:01 GMT[\r][\n]"
+11416042 DEBUG [2019-06-13 07:17:01]   << "[\r][\n]"
+11416042 DEBUG [2019-06-13 07:17:01]  Receiving response: HTTP/1.1 200 OK
+11416042 DEBUG [2019-06-13 07:17:01]  << HTTP/1.1 200 OK
+11416042 DEBUG [2019-06-13 07:17:01]  << Server: Apache-Coyote/1.1
+11416042 DEBUG [2019-06-13 07:17:01]  << X-Content-Type-Options: nosniff
+11416042 DEBUG [2019-06-13 07:17:01]  << X-XSS-Protection: 1; mode=block
+11416042 DEBUG [2019-06-13 07:17:01]  << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+11416042 DEBUG [2019-06-13 07:17:01]  << Pragma: no-cache
+11416042 DEBUG [2019-06-13 07:17:01]  << Expires: 0
+11416042 DEBUG [2019-06-13 07:17:01]  << X-Frame-Options: SAMEORIGIN
+11416042 DEBUG [2019-06-13 07:17:01]  << Content-Type: application/xml
+11416042 DEBUG [2019-06-13 07:17:01]  << Content-Length: 0
+11416042 DEBUG [2019-06-13 07:17:01]  << Date: Wed, 12 Jun 2019 23:17:01 GMT
+11416042 DEBUG [2019-06-13 07:17:01]  Connection can be kept alive indefinitely
+11416042 DEBUG [2019-06-13 07:17:01]  Released connection is reusable.
+11416042 DEBUG [2019-06-13 07:17:01]  Releasing connection [{}->http://192.168.170.129:8080][null]
+11416042 DEBUG [2019-06-13 07:17:01]  Pooling connection [{}->http://192.168.170.129:8080][null]; keep alive indefinitely
+11416042 DEBUG [2019-06-13 07:17:01]  Notifying no-one, there are no waiting threads
+11416323 DEBUG [2019-06-13 07:17:02]  Get connection: {}->http://192.168.170.129:8080, timeout = 5000
+11416323 DEBUG [2019-06-13 07:17:02]  [{}->http://192.168.170.129:8080] total kept alive: 1, total issued: 0, total allocated: 1 out of 200
+11416323 DEBUG [2019-06-13 07:17:02]  Getting free connection [{}->http://192.168.170.129:8080][null]
+11416323 DEBUG [2019-06-13 07:17:02]  Stale connection check
+11416325 DEBUG [2019-06-13 07:17:02]  CookieSpec selected: default
+11416325 DEBUG [2019-06-13 07:17:02]  Auth cache not set in the context
+11416325 DEBUG [2019-06-13 07:17:02]  Target auth state: UNCHALLENGED
+11416325 DEBUG [2019-06-13 07:17:02]  Proxy auth state: UNCHALLENGED
+11416325 DEBUG [2019-06-13 07:17:02]  Attempt 1 to execute request
+11416325 DEBUG [2019-06-13 07:17:02]  Sending request: GET /eureka/apps/delta HTTP/1.1
+11416325 DEBUG [2019-06-13 07:17:02]   >> "GET /eureka/apps/delta HTTP/1.1[\r][\n]"
+11416325 DEBUG [2019-06-13 07:17:02]   >> "Accept: application/json[\r][\n]"
+11416325 DEBUG [2019-06-13 07:17:02]   >> "DiscoveryIdentity-Name: DefaultClient[\r][\n]"
+11416325 DEBUG [2019-06-13 07:17:02]   >> "DiscoveryIdentity-Version: 1.4[\r][\n]"
+11416325 DEBUG [2019-06-13 07:17:02]   >> "DiscoveryIdentity-Id: 192.168.170.1[\r][\n]"
+11416325 DEBUG [2019-06-13 07:17:02]   >> "Accept-Encoding: gzip[\r][\n]"
+11416326 DEBUG [2019-06-13 07:17:02]   >> "Host: 192.168.170.129:8080[\r][\n]"
+11416326 DEBUG [2019-06-13 07:17:02]   >> "Connection: Keep-Alive[\r][\n]"
+11416326 DEBUG [2019-06-13 07:17:02]   >> "User-Agent: Java-EurekaClient/v1.8.6[\r][\n]"
+11416326 DEBUG [2019-06-13 07:17:02]   >> "[\r][\n]"
+11416326 DEBUG [2019-06-13 07:17:02]  >> GET /eureka/apps/delta HTTP/1.1
+11416326 DEBUG [2019-06-13 07:17:02]  >> Accept: application/json
+11416326 DEBUG [2019-06-13 07:17:02]  >> DiscoveryIdentity-Name: DefaultClient
+11416326 DEBUG [2019-06-13 07:17:02]  >> DiscoveryIdentity-Version: 1.4
+11416326 DEBUG [2019-06-13 07:17:02]  >> DiscoveryIdentity-Id: 192.168.170.1
+11416326 DEBUG [2019-06-13 07:17:02]  >> Accept-Encoding: gzip
+11416326 DEBUG [2019-06-13 07:17:02]  >> Host: 192.168.170.129:8080
+11416326 DEBUG [2019-06-13 07:17:02]  >> Connection: Keep-Alive
+11416326 DEBUG [2019-06-13 07:17:02]  >> User-Agent: Java-EurekaClient/v1.8.6
+11416328 DEBUG [2019-06-13 07:17:02]   << "HTTP/1.1 200 OK[\r][\n]"
+11416328 DEBUG [2019-06-13 07:17:02]   << "Server: Apache-Coyote/1.1[\r][\n]"
+11416328 DEBUG [2019-06-13 07:17:02]   << "X-Content-Type-Options: nosniff[\r][\n]"
+11416328 DEBUG [2019-06-13 07:17:02]   << "X-XSS-Protection: 1; mode=block[\r][\n]"
+11416328 DEBUG [2019-06-13 07:17:02]   << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+11416328 DEBUG [2019-06-13 07:17:02]   << "Pragma: no-cache[\r][\n]"
+11416328 DEBUG [2019-06-13 07:17:02]   << "Expires: 0[\r][\n]"
+11416328 DEBUG [2019-06-13 07:17:02]   << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+11416328 DEBUG [2019-06-13 07:17:02]   << "Content-Encoding: gzip[\r][\n]"
+11416328 DEBUG [2019-06-13 07:17:02]   << "Content-Type: application/json[\r][\n]"
+11416328 DEBUG [2019-06-13 07:17:02]   << "Content-Length: 99[\r][\n]"
+11416328 DEBUG [2019-06-13 07:17:02]   << "Date: Wed, 12 Jun 2019 23:17:01 GMT[\r][\n]"
+11416328 DEBUG [2019-06-13 07:17:02]   << "[\r][\n]"
+11416328 DEBUG [2019-06-13 07:17:02]  Receiving response: HTTP/1.1 200 OK
+11416328 DEBUG [2019-06-13 07:17:02]  << HTTP/1.1 200 OK
+11416328 DEBUG [2019-06-13 07:17:02]  << Server: Apache-Coyote/1.1
+11416328 DEBUG [2019-06-13 07:17:02]  << X-Content-Type-Options: nosniff
+11416328 DEBUG [2019-06-13 07:17:02]  << X-XSS-Protection: 1; mode=block
+11416328 DEBUG [2019-06-13 07:17:02]  << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+11416328 DEBUG [2019-06-13 07:17:02]  << Pragma: no-cache
+11416328 DEBUG [2019-06-13 07:17:02]  << Expires: 0
+11416328 DEBUG [2019-06-13 07:17:02]  << X-Frame-Options: SAMEORIGIN
+11416328 DEBUG [2019-06-13 07:17:02]  << Content-Encoding: gzip
+11416328 DEBUG [2019-06-13 07:17:02]  << Content-Type: application/json
+11416328 DEBUG [2019-06-13 07:17:02]  << Content-Length: 99
+11416329 DEBUG [2019-06-13 07:17:02]  << Date: Wed, 12 Jun 2019 23:17:01 GMT
+11416329 DEBUG [2019-06-13 07:17:02]  Connection can be kept alive indefinitely
+11416329 DEBUG [2019-06-13 07:17:02]   << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0xab]VJ,([0xc8][0xc9]LN,[0xc9][0xcc][0xcf]+V[0xb2][0xaa]V*K-*[0x6][0xb1][0xe3][0xe3]SRsJ[0x12][0x95][0xac][0x94][0xc][0x8d][0x8d]L[0x95]t@[\n]"
+11416329 DEBUG [2019-06-13 07:17:02]   << "[0x81][0x82][0x19][0x89][0xc5][0x19][0xc9][0xf9])[0xa9]@[0xf1][0xe0][0x10][0xc7][0xa0][0x10]O?[0xf7]x[0xc3][0xf8][0xd0][0x80]x[0x93]x[0x88][0x1a][0x98]aJV[0xd1][0xb1][0xb5][0xb5][0x0][0xea][0x9c][0xab][0xf6]`[0x0][0x0][0x0]"
+11416329 DEBUG [2019-06-13 07:17:02]  Released connection is reusable.
+11416329 DEBUG [2019-06-13 07:17:02]  Releasing connection [{}->http://192.168.170.129:8080][null]
+11416329 DEBUG [2019-06-13 07:17:02]  Pooling connection [{}->http://192.168.170.129:8080][null]; keep alive indefinitely
+11416329 DEBUG [2019-06-13 07:17:02]  Notifying no-one, there are no waiting threads
+11442821 DEBUG [2019-06-13 07:17:28]  Closing connections idle longer than 30000 SECONDS
+11442821 DEBUG [2019-06-13 07:17:28]  Closing connections idle longer than 30000 SECONDS
+11443018 DEBUG [2019-06-13 07:17:28]  Closing connections idle longer than -1 SECONDS
+11443018 DEBUG [2019-06-13 07:17:28]  Closing connections idle longer than 0 SECONDS
+11443018 DEBUG [2019-06-13 07:17:28]  Closing connection last used @ Thu Jun 13 07:17:02 CST 2019
+11443018 DEBUG [2019-06-13 07:17:28]  Deleting connection [{}->http://192.168.170.129:8080][null]
+11443018 DEBUG [2019-06-13 07:17:28]  Connection 0.0.0.0:49199<->192.168.170.129:8080 closed
+11446044 DEBUG [2019-06-13 07:17:31]  Get connection: {}->http://192.168.170.129:8080, timeout = 5000
+11446044 DEBUG [2019-06-13 07:17:31]  [{}->http://192.168.170.129:8080] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+11446044 DEBUG [2019-06-13 07:17:31]  No free connections [{}->http://192.168.170.129:8080][null]
+11446044 DEBUG [2019-06-13 07:17:31]  Available capacity: 50 out of 50 [{}->http://192.168.170.129:8080][null]
+11446044 DEBUG [2019-06-13 07:17:31]  Creating new connection [{}->http://192.168.170.129:8080]
+11446044 DEBUG [2019-06-13 07:17:31]  Connecting to 192.168.170.129:8080
+11446046 DEBUG [2019-06-13 07:17:31]  CookieSpec selected: default
+11446046 DEBUG [2019-06-13 07:17:31]  Auth cache not set in the context
+11446046 DEBUG [2019-06-13 07:17:31]  Target auth state: UNCHALLENGED
+11446046 DEBUG [2019-06-13 07:17:31]  Proxy auth state: UNCHALLENGED
+11446047 DEBUG [2019-06-13 07:17:31]  Attempt 1 to execute request
+11446047 DEBUG [2019-06-13 07:17:31]  Sending request: PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1
+11446047 DEBUG [2019-06-13 07:17:31]   >> "PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1[\r][\n]"
+11446047 DEBUG [2019-06-13 07:17:31]   >> "DiscoveryIdentity-Name: DefaultClient[\r][\n]"
+11446047 DEBUG [2019-06-13 07:17:31]   >> "DiscoveryIdentity-Version: 1.4[\r][\n]"
+11446047 DEBUG [2019-06-13 07:17:31]   >> "DiscoveryIdentity-Id: 192.168.170.1[\r][\n]"
+11446047 DEBUG [2019-06-13 07:17:31]   >> "Accept-Encoding: gzip[\r][\n]"
+11446047 DEBUG [2019-06-13 07:17:31]   >> "Content-Length: 0[\r][\n]"
+11446047 DEBUG [2019-06-13 07:17:31]   >> "Host: 192.168.170.129:8080[\r][\n]"
+11446047 DEBUG [2019-06-13 07:17:31]   >> "Connection: Keep-Alive[\r][\n]"
+11446047 DEBUG [2019-06-13 07:17:31]   >> "User-Agent: Java-EurekaClient/v1.8.6[\r][\n]"
+11446047 DEBUG [2019-06-13 07:17:31]   >> "[\r][\n]"
+11446047 DEBUG [2019-06-13 07:17:31]  >> PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1
+11446047 DEBUG [2019-06-13 07:17:31]  >> DiscoveryIdentity-Name: DefaultClient
+11446047 DEBUG [2019-06-13 07:17:31]  >> DiscoveryIdentity-Version: 1.4
+11446047 DEBUG [2019-06-13 07:17:31]  >> DiscoveryIdentity-Id: 192.168.170.1
+11446048 DEBUG [2019-06-13 07:17:31]  >> Accept-Encoding: gzip
+11446048 DEBUG [2019-06-13 07:17:31]  >> Content-Length: 0
+11446048 DEBUG [2019-06-13 07:17:31]  >> Host: 192.168.170.129:8080
+11446048 DEBUG [2019-06-13 07:17:31]  >> Connection: Keep-Alive
+11446048 DEBUG [2019-06-13 07:17:31]  >> User-Agent: Java-EurekaClient/v1.8.6
+11446051 DEBUG [2019-06-13 07:17:31]   << "HTTP/1.1 200 OK[\r][\n]"
+11446051 DEBUG [2019-06-13 07:17:31]   << "Server: Apache-Coyote/1.1[\r][\n]"
+11446051 DEBUG [2019-06-13 07:17:31]   << "X-Content-Type-Options: nosniff[\r][\n]"
+11446051 DEBUG [2019-06-13 07:17:31]   << "X-XSS-Protection: 1; mode=block[\r][\n]"
+11446051 DEBUG [2019-06-13 07:17:31]   << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+11446051 DEBUG [2019-06-13 07:17:31]   << "Pragma: no-cache[\r][\n]"
+11446051 DEBUG [2019-06-13 07:17:31]   << "Expires: 0[\r][\n]"
+11446051 DEBUG [2019-06-13 07:17:31]   << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+11446051 DEBUG [2019-06-13 07:17:31]   << "Content-Type: application/xml[\r][\n]"
+11446051 DEBUG [2019-06-13 07:17:31]   << "Content-Length: 0[\r][\n]"
+11446051 DEBUG [2019-06-13 07:17:31]   << "Date: Wed, 12 Jun 2019 23:17:31 GMT[\r][\n]"
+11446051 DEBUG [2019-06-13 07:17:31]   << "[\r][\n]"
+11446051 DEBUG [2019-06-13 07:17:31]  Receiving response: HTTP/1.1 200 OK
+11446051 DEBUG [2019-06-13 07:17:31]  << HTTP/1.1 200 OK
+11446051 DEBUG [2019-06-13 07:17:31]  << Server: Apache-Coyote/1.1
+11446052 DEBUG [2019-06-13 07:17:31]  << X-Content-Type-Options: nosniff
+11446052 DEBUG [2019-06-13 07:17:31]  << X-XSS-Protection: 1; mode=block
+11446052 DEBUG [2019-06-13 07:17:31]  << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+11446052 DEBUG [2019-06-13 07:17:31]  << Pragma: no-cache
+11446052 DEBUG [2019-06-13 07:17:31]  << Expires: 0
+11446052 DEBUG [2019-06-13 07:17:31]  << X-Frame-Options: SAMEORIGIN
+11446052 DEBUG [2019-06-13 07:17:31]  << Content-Type: application/xml
+11446052 DEBUG [2019-06-13 07:17:31]  << Content-Length: 0
+11446052 DEBUG [2019-06-13 07:17:31]  << Date: Wed, 12 Jun 2019 23:17:31 GMT
+11446052 DEBUG [2019-06-13 07:17:31]  Connection can be kept alive indefinitely
+11446052 DEBUG [2019-06-13 07:17:31]  Released connection is reusable.
+11446052 DEBUG [2019-06-13 07:17:31]  Releasing connection [{}->http://192.168.170.129:8080][null]
+11446052 DEBUG [2019-06-13 07:17:31]  Pooling connection [{}->http://192.168.170.129:8080][null]; keep alive indefinitely
+11446052 DEBUG [2019-06-13 07:17:31]  Notifying no-one, there are no waiting threads
+11446331 DEBUG [2019-06-13 07:17:32]  Get connection: {}->http://192.168.170.129:8080, timeout = 5000
+11446331 DEBUG [2019-06-13 07:17:32]  [{}->http://192.168.170.129:8080] total kept alive: 1, total issued: 0, total allocated: 1 out of 200
+11446331 DEBUG [2019-06-13 07:17:32]  Getting free connection [{}->http://192.168.170.129:8080][null]
+11446331 DEBUG [2019-06-13 07:17:32]  Stale connection check
+11446333 DEBUG [2019-06-13 07:17:32]  CookieSpec selected: default
+11446333 DEBUG [2019-06-13 07:17:32]  Auth cache not set in the context
+11446333 DEBUG [2019-06-13 07:17:32]  Target auth state: UNCHALLENGED
+11446333 DEBUG [2019-06-13 07:17:32]  Proxy auth state: UNCHALLENGED
+11446333 DEBUG [2019-06-13 07:17:32]  Attempt 1 to execute request
+11446333 DEBUG [2019-06-13 07:17:32]  Sending request: GET /eureka/apps/delta HTTP/1.1
+11446333 DEBUG [2019-06-13 07:17:32]   >> "GET /eureka/apps/delta HTTP/1.1[\r][\n]"
+11446333 DEBUG [2019-06-13 07:17:32]   >> "Accept: application/json[\r][\n]"
+11446333 DEBUG [2019-06-13 07:17:32]   >> "DiscoveryIdentity-Name: DefaultClient[\r][\n]"
+11446333 DEBUG [2019-06-13 07:17:32]   >> "DiscoveryIdentity-Version: 1.4[\r][\n]"
+11446334 DEBUG [2019-06-13 07:17:32]   >> "DiscoveryIdentity-Id: 192.168.170.1[\r][\n]"
+11446334 DEBUG [2019-06-13 07:17:32]   >> "Accept-Encoding: gzip[\r][\n]"
+11446334 DEBUG [2019-06-13 07:17:32]   >> "Host: 192.168.170.129:8080[\r][\n]"
+11446334 DEBUG [2019-06-13 07:17:32]   >> "Connection: Keep-Alive[\r][\n]"
+11446334 DEBUG [2019-06-13 07:17:32]   >> "User-Agent: Java-EurekaClient/v1.8.6[\r][\n]"
+11446334 DEBUG [2019-06-13 07:17:32]   >> "[\r][\n]"
+11446334 DEBUG [2019-06-13 07:17:32]  >> GET /eureka/apps/delta HTTP/1.1
+11446334 DEBUG [2019-06-13 07:17:32]  >> Accept: application/json
+11446334 DEBUG [2019-06-13 07:17:32]  >> DiscoveryIdentity-Name: DefaultClient
+11446334 DEBUG [2019-06-13 07:17:32]  >> DiscoveryIdentity-Version: 1.4
+11446334 DEBUG [2019-06-13 07:17:32]  >> DiscoveryIdentity-Id: 192.168.170.1
+11446334 DEBUG [2019-06-13 07:17:32]  >> Accept-Encoding: gzip
+11446334 DEBUG [2019-06-13 07:17:32]  >> Host: 192.168.170.129:8080
+11446334 DEBUG [2019-06-13 07:17:32]  >> Connection: Keep-Alive
+11446334 DEBUG [2019-06-13 07:17:32]  >> User-Agent: Java-EurekaClient/v1.8.6
+11446337 DEBUG [2019-06-13 07:17:32]   << "HTTP/1.1 200 OK[\r][\n]"
+11446337 DEBUG [2019-06-13 07:17:32]   << "Server: Apache-Coyote/1.1[\r][\n]"
+11446337 DEBUG [2019-06-13 07:17:32]   << "X-Content-Type-Options: nosniff[\r][\n]"
+11446337 DEBUG [2019-06-13 07:17:32]   << "X-XSS-Protection: 1; mode=block[\r][\n]"
+11446337 DEBUG [2019-06-13 07:17:32]   << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+11446337 DEBUG [2019-06-13 07:17:32]   << "Pragma: no-cache[\r][\n]"
+11446337 DEBUG [2019-06-13 07:17:32]   << "Expires: 0[\r][\n]"
+11446337 DEBUG [2019-06-13 07:17:32]   << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+11446337 DEBUG [2019-06-13 07:17:32]   << "Content-Encoding: gzip[\r][\n]"
+11446337 DEBUG [2019-06-13 07:17:32]   << "Content-Type: application/json[\r][\n]"
+11446337 DEBUG [2019-06-13 07:17:32]   << "Content-Length: 99[\r][\n]"
+11446337 DEBUG [2019-06-13 07:17:32]   << "Date: Wed, 12 Jun 2019 23:17:31 GMT[\r][\n]"
+11446337 DEBUG [2019-06-13 07:17:32]   << "[\r][\n]"
+11446337 DEBUG [2019-06-13 07:17:32]  Receiving response: HTTP/1.1 200 OK
+11446337 DEBUG [2019-06-13 07:17:32]  << HTTP/1.1 200 OK
+11446337 DEBUG [2019-06-13 07:17:32]  << Server: Apache-Coyote/1.1
+11446337 DEBUG [2019-06-13 07:17:32]  << X-Content-Type-Options: nosniff
+11446337 DEBUG [2019-06-13 07:17:32]  << X-XSS-Protection: 1; mode=block
+11446337 DEBUG [2019-06-13 07:17:32]  << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+11446337 DEBUG [2019-06-13 07:17:32]  << Pragma: no-cache
+11446337 DEBUG [2019-06-13 07:17:32]  << Expires: 0
+11446337 DEBUG [2019-06-13 07:17:32]  << X-Frame-Options: SAMEORIGIN
+11446338 DEBUG [2019-06-13 07:17:32]  << Content-Encoding: gzip
+11446338 DEBUG [2019-06-13 07:17:32]  << Content-Type: application/json
+11446338 DEBUG [2019-06-13 07:17:32]  << Content-Length: 99
+11446338 DEBUG [2019-06-13 07:17:32]  << Date: Wed, 12 Jun 2019 23:17:31 GMT
+11446338 DEBUG [2019-06-13 07:17:32]  Connection can be kept alive indefinitely
+11446338 DEBUG [2019-06-13 07:17:32]   << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0xab]VJ,([0xc8][0xc9]LN,[0xc9][0xcc][0xcf]+V[0xb2][0xaa]V*K-*[0x6][0xb1][0xe3][0xe3]SRsJ[0x12][0x95][0xac][0x94][0xc][0x8d][0x8d]L[0x95]t@[\n]"
+11446338 DEBUG [2019-06-13 07:17:32]   << "[0x81][0x82][0x19][0x89][0xc5][0x19][0xc9][0xf9])[0xa9]@[0xf1][0xe0][0x10][0xc7][0xa0][0x10]O?[0xf7]x[0xc3][0xf8][0xd0][0x80]x[0x93]x[0x88][0x1a][0x98]aJV[0xd1][0xb1][0xb5][0xb5][0x0][0xea][0x9c][0xab][0xf6]`[0x0][0x0][0x0]"
+11446338 DEBUG [2019-06-13 07:17:32]  Released connection is reusable.
+11446338 DEBUG [2019-06-13 07:17:32]  Releasing connection [{}->http://192.168.170.129:8080][null]
+11446338 DEBUG [2019-06-13 07:17:32]  Pooling connection [{}->http://192.168.170.129:8080][null]; keep alive indefinitely
+11446339 DEBUG [2019-06-13 07:17:32]  Notifying no-one, there are no waiting threads
+11472822 DEBUG [2019-06-13 07:17:58]  Closing connections idle longer than 30000 SECONDS
+11472822 DEBUG [2019-06-13 07:17:58]  Closing connections idle longer than 30000 SECONDS
+11473020 DEBUG [2019-06-13 07:17:58]  Closing connections idle longer than -1 SECONDS
+11473020 DEBUG [2019-06-13 07:17:58]  Closing connections idle longer than 0 SECONDS
+11473020 DEBUG [2019-06-13 07:17:58]  Closing connection last used @ Thu Jun 13 07:17:32 CST 2019
+11473020 DEBUG [2019-06-13 07:17:58]  Deleting connection [{}->http://192.168.170.129:8080][null]
+11473020 DEBUG [2019-06-13 07:17:58]  Connection 0.0.0.0:49495<->192.168.170.129:8080 closed
+11476054 DEBUG [2019-06-13 07:18:01]  Get connection: {}->http://192.168.170.129:8080, timeout = 5000
+11476054 DEBUG [2019-06-13 07:18:01]  [{}->http://192.168.170.129:8080] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+11476054 DEBUG [2019-06-13 07:18:01]  No free connections [{}->http://192.168.170.129:8080][null]
+11476054 DEBUG [2019-06-13 07:18:01]  Available capacity: 50 out of 50 [{}->http://192.168.170.129:8080][null]
+11476054 DEBUG [2019-06-13 07:18:01]  Creating new connection [{}->http://192.168.170.129:8080]
+11476054 DEBUG [2019-06-13 07:18:01]  Connecting to 192.168.170.129:8080
+11476054 DEBUG [2019-06-13 07:18:01]  CookieSpec selected: default
+11476054 DEBUG [2019-06-13 07:18:01]  Auth cache not set in the context
+11476054 DEBUG [2019-06-13 07:18:01]  Target auth state: UNCHALLENGED
+11476055 DEBUG [2019-06-13 07:18:01]  Proxy auth state: UNCHALLENGED
+11476055 DEBUG [2019-06-13 07:18:01]  Attempt 1 to execute request
+11476055 DEBUG [2019-06-13 07:18:01]  Sending request: PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1
+11476055 DEBUG [2019-06-13 07:18:01]   >> "PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1[\r][\n]"
+11476055 DEBUG [2019-06-13 07:18:01]   >> "DiscoveryIdentity-Name: DefaultClient[\r][\n]"
+11476055 DEBUG [2019-06-13 07:18:01]   >> "DiscoveryIdentity-Version: 1.4[\r][\n]"
+11476055 DEBUG [2019-06-13 07:18:01]   >> "DiscoveryIdentity-Id: 192.168.170.1[\r][\n]"
+11476055 DEBUG [2019-06-13 07:18:01]   >> "Accept-Encoding: gzip[\r][\n]"
+11476055 DEBUG [2019-06-13 07:18:01]   >> "Content-Length: 0[\r][\n]"
+11476055 DEBUG [2019-06-13 07:18:01]   >> "Host: 192.168.170.129:8080[\r][\n]"
+11476055 DEBUG [2019-06-13 07:18:01]   >> "Connection: Keep-Alive[\r][\n]"
+11476055 DEBUG [2019-06-13 07:18:01]   >> "User-Agent: Java-EurekaClient/v1.8.6[\r][\n]"
+11476055 DEBUG [2019-06-13 07:18:01]   >> "[\r][\n]"
+11476055 DEBUG [2019-06-13 07:18:01]  >> PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1
+11476055 DEBUG [2019-06-13 07:18:01]  >> DiscoveryIdentity-Name: DefaultClient
+11476055 DEBUG [2019-06-13 07:18:01]  >> DiscoveryIdentity-Version: 1.4
+11476055 DEBUG [2019-06-13 07:18:01]  >> DiscoveryIdentity-Id: 192.168.170.1
+11476055 DEBUG [2019-06-13 07:18:01]  >> Accept-Encoding: gzip
+11476055 DEBUG [2019-06-13 07:18:01]  >> Content-Length: 0
+11476055 DEBUG [2019-06-13 07:18:01]  >> Host: 192.168.170.129:8080
+11476055 DEBUG [2019-06-13 07:18:01]  >> Connection: Keep-Alive
+11476055 DEBUG [2019-06-13 07:18:01]  >> User-Agent: Java-EurekaClient/v1.8.6
+11476056 DEBUG [2019-06-13 07:18:01]   << "HTTP/1.1 200 OK[\r][\n]"
+11476056 DEBUG [2019-06-13 07:18:01]   << "Server: Apache-Coyote/1.1[\r][\n]"
+11476056 DEBUG [2019-06-13 07:18:01]   << "X-Content-Type-Options: nosniff[\r][\n]"
+11476056 DEBUG [2019-06-13 07:18:01]   << "X-XSS-Protection: 1; mode=block[\r][\n]"
+11476056 DEBUG [2019-06-13 07:18:01]   << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+11476056 DEBUG [2019-06-13 07:18:01]   << "Pragma: no-cache[\r][\n]"
+11476056 DEBUG [2019-06-13 07:18:01]   << "Expires: 0[\r][\n]"
+11476056 DEBUG [2019-06-13 07:18:01]   << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+11476056 DEBUG [2019-06-13 07:18:01]   << "Content-Type: application/xml[\r][\n]"
+11476056 DEBUG [2019-06-13 07:18:01]   << "Content-Length: 0[\r][\n]"
+11476056 DEBUG [2019-06-13 07:18:01]   << "Date: Wed, 12 Jun 2019 23:18:01 GMT[\r][\n]"
+11476056 DEBUG [2019-06-13 07:18:01]   << "[\r][\n]"
+11476056 DEBUG [2019-06-13 07:18:01]  Receiving response: HTTP/1.1 200 OK
+11476056 DEBUG [2019-06-13 07:18:01]  << HTTP/1.1 200 OK
+11476056 DEBUG [2019-06-13 07:18:01]  << Server: Apache-Coyote/1.1
+11476056 DEBUG [2019-06-13 07:18:01]  << X-Content-Type-Options: nosniff
+11476056 DEBUG [2019-06-13 07:18:01]  << X-XSS-Protection: 1; mode=block
+11476056 DEBUG [2019-06-13 07:18:01]  << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+11476056 DEBUG [2019-06-13 07:18:01]  << Pragma: no-cache
+11476056 DEBUG [2019-06-13 07:18:01]  << Expires: 0
+11476056 DEBUG [2019-06-13 07:18:01]  << X-Frame-Options: SAMEORIGIN
+11476056 DEBUG [2019-06-13 07:18:01]  << Content-Type: application/xml
+11476056 DEBUG [2019-06-13 07:18:01]  << Content-Length: 0
+11476056 DEBUG [2019-06-13 07:18:01]  << Date: Wed, 12 Jun 2019 23:18:01 GMT
+11476056 DEBUG [2019-06-13 07:18:01]  Connection can be kept alive indefinitely
+11476056 DEBUG [2019-06-13 07:18:01]  Released connection is reusable.
+11476056 DEBUG [2019-06-13 07:18:01]  Releasing connection [{}->http://192.168.170.129:8080][null]
+11476056 DEBUG [2019-06-13 07:18:01]  Pooling connection [{}->http://192.168.170.129:8080][null]; keep alive indefinitely
+11476056 DEBUG [2019-06-13 07:18:01]  Notifying no-one, there are no waiting threads
+11476340 DEBUG [2019-06-13 07:18:02]  Get connection: {}->http://192.168.170.129:8080, timeout = 5000
+11476340 DEBUG [2019-06-13 07:18:02]  [{}->http://192.168.170.129:8080] total kept alive: 1, total issued: 0, total allocated: 1 out of 200
+11476340 DEBUG [2019-06-13 07:18:02]  Getting free connection [{}->http://192.168.170.129:8080][null]
+11476340 DEBUG [2019-06-13 07:18:02]  Stale connection check
+11476341 DEBUG [2019-06-13 07:18:02]  CookieSpec selected: default
+11476341 DEBUG [2019-06-13 07:18:02]  Auth cache not set in the context
+11476341 DEBUG [2019-06-13 07:18:02]  Target auth state: UNCHALLENGED
+11476341 DEBUG [2019-06-13 07:18:02]  Proxy auth state: UNCHALLENGED
+11476341 DEBUG [2019-06-13 07:18:02]  Attempt 1 to execute request
+11476341 DEBUG [2019-06-13 07:18:02]  Sending request: GET /eureka/apps/delta HTTP/1.1
+11476341 DEBUG [2019-06-13 07:18:02]   >> "GET /eureka/apps/delta HTTP/1.1[\r][\n]"
+11476341 DEBUG [2019-06-13 07:18:02]   >> "Accept: application/json[\r][\n]"
+11476341 DEBUG [2019-06-13 07:18:02]   >> "DiscoveryIdentity-Name: DefaultClient[\r][\n]"
+11476341 DEBUG [2019-06-13 07:18:02]   >> "DiscoveryIdentity-Version: 1.4[\r][\n]"
+11476341 DEBUG [2019-06-13 07:18:02]   >> "DiscoveryIdentity-Id: 192.168.170.1[\r][\n]"
+11476341 DEBUG [2019-06-13 07:18:02]   >> "Accept-Encoding: gzip[\r][\n]"
+11476341 DEBUG [2019-06-13 07:18:02]   >> "Host: 192.168.170.129:8080[\r][\n]"
+11476341 DEBUG [2019-06-13 07:18:02]   >> "Connection: Keep-Alive[\r][\n]"
+11476341 DEBUG [2019-06-13 07:18:02]   >> "User-Agent: Java-EurekaClient/v1.8.6[\r][\n]"
+11476341 DEBUG [2019-06-13 07:18:02]   >> "[\r][\n]"
+11476341 DEBUG [2019-06-13 07:18:02]  >> GET /eureka/apps/delta HTTP/1.1
+11476341 DEBUG [2019-06-13 07:18:02]  >> Accept: application/json
+11476341 DEBUG [2019-06-13 07:18:02]  >> DiscoveryIdentity-Name: DefaultClient
+11476341 DEBUG [2019-06-13 07:18:02]  >> DiscoveryIdentity-Version: 1.4
+11476341 DEBUG [2019-06-13 07:18:02]  >> DiscoveryIdentity-Id: 192.168.170.1
+11476341 DEBUG [2019-06-13 07:18:02]  >> Accept-Encoding: gzip
+11476341 DEBUG [2019-06-13 07:18:02]  >> Host: 192.168.170.129:8080
+11476341 DEBUG [2019-06-13 07:18:02]  >> Connection: Keep-Alive
+11476341 DEBUG [2019-06-13 07:18:02]  >> User-Agent: Java-EurekaClient/v1.8.6
+11476342 DEBUG [2019-06-13 07:18:02]   << "HTTP/1.1 200 OK[\r][\n]"
+11476342 DEBUG [2019-06-13 07:18:02]   << "Server: Apache-Coyote/1.1[\r][\n]"
+11476342 DEBUG [2019-06-13 07:18:02]   << "X-Content-Type-Options: nosniff[\r][\n]"
+11476342 DEBUG [2019-06-13 07:18:02]   << "X-XSS-Protection: 1; mode=block[\r][\n]"
+11476342 DEBUG [2019-06-13 07:18:02]   << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+11476342 DEBUG [2019-06-13 07:18:02]   << "Pragma: no-cache[\r][\n]"
+11476342 DEBUG [2019-06-13 07:18:02]   << "Expires: 0[\r][\n]"
+11476342 DEBUG [2019-06-13 07:18:02]   << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+11476342 DEBUG [2019-06-13 07:18:02]   << "Content-Encoding: gzip[\r][\n]"
+11476342 DEBUG [2019-06-13 07:18:02]   << "Content-Type: application/json[\r][\n]"
+11476342 DEBUG [2019-06-13 07:18:02]   << "Content-Length: 99[\r][\n]"
+11476342 DEBUG [2019-06-13 07:18:02]   << "Date: Wed, 12 Jun 2019 23:18:01 GMT[\r][\n]"
+11476342 DEBUG [2019-06-13 07:18:02]   << "[\r][\n]"
+11476342 DEBUG [2019-06-13 07:18:02]  Receiving response: HTTP/1.1 200 OK
+11476342 DEBUG [2019-06-13 07:18:02]  << HTTP/1.1 200 OK
+11476342 DEBUG [2019-06-13 07:18:02]  << Server: Apache-Coyote/1.1
+11476342 DEBUG [2019-06-13 07:18:02]  << X-Content-Type-Options: nosniff
+11476342 DEBUG [2019-06-13 07:18:02]  << X-XSS-Protection: 1; mode=block
+11476342 DEBUG [2019-06-13 07:18:02]  << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+11476342 DEBUG [2019-06-13 07:18:02]  << Pragma: no-cache
+11476342 DEBUG [2019-06-13 07:18:02]  << Expires: 0
+11476342 DEBUG [2019-06-13 07:18:02]  << X-Frame-Options: SAMEORIGIN
+11476342 DEBUG [2019-06-13 07:18:02]  << Content-Encoding: gzip
+11476342 DEBUG [2019-06-13 07:18:02]  << Content-Type: application/json
+11476342 DEBUG [2019-06-13 07:18:02]  << Content-Length: 99
+11476344 DEBUG [2019-06-13 07:18:02]  << Date: Wed, 12 Jun 2019 23:18:01 GMT
+11476344 DEBUG [2019-06-13 07:18:02]  Connection can be kept alive indefinitely
+11476344 DEBUG [2019-06-13 07:18:02]   << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0xab]VJ,([0xc8][0xc9]LN,[0xc9][0xcc][0xcf]+V[0xb2][0xaa]V*K-*[0x6][0xb1][0xe3][0xe3]SRsJ[0x12][0x95][0xac][0x94][0xc][0x8d][0x8d][0xcc][0x94]t@[\n]"
+11476344 DEBUG [2019-06-13 07:18:02]   << "[0x81][0x82][0x19][0x89][0xc5][0x19][0xc9][0xf9])[0xa9]@[0xf1][0xe0][0x10][0xc7][0xa0][0x10]O?[0xf7]x[0xc3][0xf8][0xd0][0x80]x[0x93]x[0x88][0x1a][0x98]aJV[0xd1][0xb1][0xb5][0xb5][0x0]F[0xea]T[0xdf]`[0x0][0x0][0x0]"
+11476344 DEBUG [2019-06-13 07:18:02]  Released connection is reusable.
+11476344 DEBUG [2019-06-13 07:18:02]  Releasing connection [{}->http://192.168.170.129:8080][null]
+11476344 DEBUG [2019-06-13 07:18:02]  Pooling connection [{}->http://192.168.170.129:8080][null]; keep alive indefinitely
+11476344 DEBUG [2019-06-13 07:18:02]  Notifying no-one, there are no waiting threads
+11502823 DEBUG [2019-06-13 07:18:28]  Closing connections idle longer than 30000 SECONDS
+11502823 DEBUG [2019-06-13 07:18:28]  Closing connections idle longer than 30000 SECONDS
+11503021 DEBUG [2019-06-13 07:18:28]  Closing connections idle longer than -1 SECONDS
+11503021 DEBUG [2019-06-13 07:18:28]  Closing connections idle longer than 0 SECONDS
+11503021 DEBUG [2019-06-13 07:18:28]  Closing connection last used @ Thu Jun 13 07:18:02 CST 2019
+11503021 DEBUG [2019-06-13 07:18:28]  Deleting connection [{}->http://192.168.170.129:8080][null]
+11503021 DEBUG [2019-06-13 07:18:28]  Connection 0.0.0.0:49871<->192.168.170.129:8080 closed
+11506057 DEBUG [2019-06-13 07:18:31]  Get connection: {}->http://192.168.170.129:8080, timeout = 5000
+11506057 DEBUG [2019-06-13 07:18:31]  [{}->http://192.168.170.129:8080] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+11506057 DEBUG [2019-06-13 07:18:31]  No free connections [{}->http://192.168.170.129:8080][null]
+11506057 DEBUG [2019-06-13 07:18:31]  Available capacity: 50 out of 50 [{}->http://192.168.170.129:8080][null]
+11506057 DEBUG [2019-06-13 07:18:31]  Creating new connection [{}->http://192.168.170.129:8080]
+11506057 DEBUG [2019-06-13 07:18:31]  Connecting to 192.168.170.129:8080
+11506058 DEBUG [2019-06-13 07:18:31]  CookieSpec selected: default
+11506058 DEBUG [2019-06-13 07:18:31]  Auth cache not set in the context
+11506058 DEBUG [2019-06-13 07:18:31]  Target auth state: UNCHALLENGED
+11506058 DEBUG [2019-06-13 07:18:31]  Proxy auth state: UNCHALLENGED
+11506058 DEBUG [2019-06-13 07:18:31]  Attempt 1 to execute request
+11506058 DEBUG [2019-06-13 07:18:31]  Sending request: PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1
+11506058 DEBUG [2019-06-13 07:18:31]   >> "PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1[\r][\n]"
+11506058 DEBUG [2019-06-13 07:18:31]   >> "DiscoveryIdentity-Name: DefaultClient[\r][\n]"
+11506058 DEBUG [2019-06-13 07:18:31]   >> "DiscoveryIdentity-Version: 1.4[\r][\n]"
+11506058 DEBUG [2019-06-13 07:18:31]   >> "DiscoveryIdentity-Id: 192.168.170.1[\r][\n]"
+11506058 DEBUG [2019-06-13 07:18:31]   >> "Accept-Encoding: gzip[\r][\n]"
+11506058 DEBUG [2019-06-13 07:18:31]   >> "Content-Length: 0[\r][\n]"
+11506058 DEBUG [2019-06-13 07:18:31]   >> "Host: 192.168.170.129:8080[\r][\n]"
+11506058 DEBUG [2019-06-13 07:18:31]   >> "Connection: Keep-Alive[\r][\n]"
+11506058 DEBUG [2019-06-13 07:18:31]   >> "User-Agent: Java-EurekaClient/v1.8.6[\r][\n]"
+11506058 DEBUG [2019-06-13 07:18:31]   >> "[\r][\n]"
+11506058 DEBUG [2019-06-13 07:18:31]  >> PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1
+11506058 DEBUG [2019-06-13 07:18:31]  >> DiscoveryIdentity-Name: DefaultClient
+11506058 DEBUG [2019-06-13 07:18:31]  >> DiscoveryIdentity-Version: 1.4
+11506058 DEBUG [2019-06-13 07:18:31]  >> DiscoveryIdentity-Id: 192.168.170.1
+11506058 DEBUG [2019-06-13 07:18:31]  >> Accept-Encoding: gzip
+11506058 DEBUG [2019-06-13 07:18:31]  >> Content-Length: 0
+11506058 DEBUG [2019-06-13 07:18:31]  >> Host: 192.168.170.129:8080
+11506058 DEBUG [2019-06-13 07:18:31]  >> Connection: Keep-Alive
+11506058 DEBUG [2019-06-13 07:18:31]  >> User-Agent: Java-EurekaClient/v1.8.6
+11506059 DEBUG [2019-06-13 07:18:31]   << "HTTP/1.1 200 OK[\r][\n]"
+11506059 DEBUG [2019-06-13 07:18:31]   << "Server: Apache-Coyote/1.1[\r][\n]"
+11506059 DEBUG [2019-06-13 07:18:31]   << "X-Content-Type-Options: nosniff[\r][\n]"
+11506059 DEBUG [2019-06-13 07:18:31]   << "X-XSS-Protection: 1; mode=block[\r][\n]"
+11506059 DEBUG [2019-06-13 07:18:31]   << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+11506059 DEBUG [2019-06-13 07:18:31]   << "Pragma: no-cache[\r][\n]"
+11506059 DEBUG [2019-06-13 07:18:31]   << "Expires: 0[\r][\n]"
+11506059 DEBUG [2019-06-13 07:18:31]   << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+11506059 DEBUG [2019-06-13 07:18:31]   << "Content-Type: application/xml[\r][\n]"
+11506059 DEBUG [2019-06-13 07:18:31]   << "Content-Length: 0[\r][\n]"
+11506059 DEBUG [2019-06-13 07:18:31]   << "Date: Wed, 12 Jun 2019 23:18:31 GMT[\r][\n]"
+11506059 DEBUG [2019-06-13 07:18:31]   << "[\r][\n]"
+11506059 DEBUG [2019-06-13 07:18:31]  Receiving response: HTTP/1.1 200 OK
+11506059 DEBUG [2019-06-13 07:18:31]  << HTTP/1.1 200 OK
+11506059 DEBUG [2019-06-13 07:18:31]  << Server: Apache-Coyote/1.1
+11506059 DEBUG [2019-06-13 07:18:31]  << X-Content-Type-Options: nosniff
+11506059 DEBUG [2019-06-13 07:18:31]  << X-XSS-Protection: 1; mode=block
+11506059 DEBUG [2019-06-13 07:18:31]  << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+11506059 DEBUG [2019-06-13 07:18:31]  << Pragma: no-cache
+11506059 DEBUG [2019-06-13 07:18:31]  << Expires: 0
+11506059 DEBUG [2019-06-13 07:18:31]  << X-Frame-Options: SAMEORIGIN
+11506059 DEBUG [2019-06-13 07:18:31]  << Content-Type: application/xml
+11506059 DEBUG [2019-06-13 07:18:31]  << Content-Length: 0
+11506059 DEBUG [2019-06-13 07:18:31]  << Date: Wed, 12 Jun 2019 23:18:31 GMT
+11506059 DEBUG [2019-06-13 07:18:31]  Connection can be kept alive indefinitely
+11506059 DEBUG [2019-06-13 07:18:31]  Released connection is reusable.
+11506059 DEBUG [2019-06-13 07:18:31]  Releasing connection [{}->http://192.168.170.129:8080][null]
+11506059 DEBUG [2019-06-13 07:18:31]  Pooling connection [{}->http://192.168.170.129:8080][null]; keep alive indefinitely
+11506059 DEBUG [2019-06-13 07:18:31]  Notifying no-one, there are no waiting threads
+11506345 DEBUG [2019-06-13 07:18:32]  Get connection: {}->http://192.168.170.129:8080, timeout = 5000
+11506345 DEBUG [2019-06-13 07:18:32]  [{}->http://192.168.170.129:8080] total kept alive: 1, total issued: 0, total allocated: 1 out of 200
+11506345 DEBUG [2019-06-13 07:18:32]  Getting free connection [{}->http://192.168.170.129:8080][null]
+11506345 DEBUG [2019-06-13 07:18:32]  Stale connection check
+11506347 DEBUG [2019-06-13 07:18:32]  CookieSpec selected: default
+11506347 DEBUG [2019-06-13 07:18:32]  Auth cache not set in the context
+11506347 DEBUG [2019-06-13 07:18:32]  Target auth state: UNCHALLENGED
+11506347 DEBUG [2019-06-13 07:18:32]  Proxy auth state: UNCHALLENGED
+11506347 DEBUG [2019-06-13 07:18:32]  Attempt 1 to execute request
+11506347 DEBUG [2019-06-13 07:18:32]  Sending request: GET /eureka/apps/delta HTTP/1.1
+11506347 DEBUG [2019-06-13 07:18:32]   >> "GET /eureka/apps/delta HTTP/1.1[\r][\n]"
+11506347 DEBUG [2019-06-13 07:18:32]   >> "Accept: application/json[\r][\n]"
+11506347 DEBUG [2019-06-13 07:18:32]   >> "DiscoveryIdentity-Name: DefaultClient[\r][\n]"
+11506347 DEBUG [2019-06-13 07:18:32]   >> "DiscoveryIdentity-Version: 1.4[\r][\n]"
+11506347 DEBUG [2019-06-13 07:18:32]   >> "DiscoveryIdentity-Id: 192.168.170.1[\r][\n]"
+11506347 DEBUG [2019-06-13 07:18:32]   >> "Accept-Encoding: gzip[\r][\n]"
+11506347 DEBUG [2019-06-13 07:18:32]   >> "Host: 192.168.170.129:8080[\r][\n]"
+11506347 DEBUG [2019-06-13 07:18:32]   >> "Connection: Keep-Alive[\r][\n]"
+11506347 DEBUG [2019-06-13 07:18:32]   >> "User-Agent: Java-EurekaClient/v1.8.6[\r][\n]"
+11506347 DEBUG [2019-06-13 07:18:32]   >> "[\r][\n]"
+11506347 DEBUG [2019-06-13 07:18:32]  >> GET /eureka/apps/delta HTTP/1.1
+11506347 DEBUG [2019-06-13 07:18:32]  >> Accept: application/json
+11506347 DEBUG [2019-06-13 07:18:32]  >> DiscoveryIdentity-Name: DefaultClient
+11506347 DEBUG [2019-06-13 07:18:32]  >> DiscoveryIdentity-Version: 1.4
+11506347 DEBUG [2019-06-13 07:18:32]  >> DiscoveryIdentity-Id: 192.168.170.1
+11506347 DEBUG [2019-06-13 07:18:32]  >> Accept-Encoding: gzip
+11506347 DEBUG [2019-06-13 07:18:32]  >> Host: 192.168.170.129:8080
+11506347 DEBUG [2019-06-13 07:18:32]  >> Connection: Keep-Alive
+11506347 DEBUG [2019-06-13 07:18:32]  >> User-Agent: Java-EurekaClient/v1.8.6
+11506349 DEBUG [2019-06-13 07:18:32]   << "HTTP/1.1 200 OK[\r][\n]"
+11506349 DEBUG [2019-06-13 07:18:32]   << "Server: Apache-Coyote/1.1[\r][\n]"
+11506349 DEBUG [2019-06-13 07:18:32]   << "X-Content-Type-Options: nosniff[\r][\n]"
+11506349 DEBUG [2019-06-13 07:18:32]   << "X-XSS-Protection: 1; mode=block[\r][\n]"
+11506349 DEBUG [2019-06-13 07:18:32]   << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+11506349 DEBUG [2019-06-13 07:18:32]   << "Pragma: no-cache[\r][\n]"
+11506349 DEBUG [2019-06-13 07:18:32]   << "Expires: 0[\r][\n]"
+11506349 DEBUG [2019-06-13 07:18:32]   << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+11506349 DEBUG [2019-06-13 07:18:32]   << "Content-Encoding: gzip[\r][\n]"
+11506349 DEBUG [2019-06-13 07:18:32]   << "Content-Type: application/json[\r][\n]"
+11506349 DEBUG [2019-06-13 07:18:32]   << "Content-Length: 99[\r][\n]"
+11506349 DEBUG [2019-06-13 07:18:32]   << "Date: Wed, 12 Jun 2019 23:18:31 GMT[\r][\n]"
+11506349 DEBUG [2019-06-13 07:18:32]   << "[\r][\n]"
+11506349 DEBUG [2019-06-13 07:18:32]  Receiving response: HTTP/1.1 200 OK
+11506349 DEBUG [2019-06-13 07:18:32]  << HTTP/1.1 200 OK
+11506349 DEBUG [2019-06-13 07:18:32]  << Server: Apache-Coyote/1.1
+11506349 DEBUG [2019-06-13 07:18:32]  << X-Content-Type-Options: nosniff
+11506349 DEBUG [2019-06-13 07:18:32]  << X-XSS-Protection: 1; mode=block
+11506349 DEBUG [2019-06-13 07:18:32]  << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+11506349 DEBUG [2019-06-13 07:18:32]  << Pragma: no-cache
+11506349 DEBUG [2019-06-13 07:18:32]  << Expires: 0
+11506349 DEBUG [2019-06-13 07:18:32]  << X-Frame-Options: SAMEORIGIN
+11506349 DEBUG [2019-06-13 07:18:32]  << Content-Encoding: gzip
+11506349 DEBUG [2019-06-13 07:18:32]  << Content-Type: application/json
+11506349 DEBUG [2019-06-13 07:18:32]  << Content-Length: 99
+11506349 DEBUG [2019-06-13 07:18:32]  << Date: Wed, 12 Jun 2019 23:18:31 GMT
+11506349 DEBUG [2019-06-13 07:18:32]  Connection can be kept alive indefinitely
+11506349 DEBUG [2019-06-13 07:18:32]   << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0xab]VJ,([0xc8][0xc9]LN,[0xc9][0xcc][0xcf]+V[0xb2][0xaa]V*K-*[0x6][0xb1][0xe3][0xe3]SRsJ[0x12][0x95][0xac][0x94][0xc][0x8d][0x8d][0xcc][0x94]t@[\n]"
+11506349 DEBUG [2019-06-13 07:18:32]   << "[0x81][0x82][0x19][0x89][0xc5][0x19][0xc9][0xf9])[0xa9]@[0xf1][0xe0][0x10][0xc7][0xa0][0x10]O?[0xf7]x[0xc3][0xf8][0xd0][0x80]x[0x93]x[0x88][0x1a][0x98]aJV[0xd1][0xb1][0xb5][0xb5][0x0]F[0xea]T[0xdf]`[0x0][0x0][0x0]"
+11506349 DEBUG [2019-06-13 07:18:32]  Released connection is reusable.
+11506349 DEBUG [2019-06-13 07:18:32]  Releasing connection [{}->http://192.168.170.129:8080][null]
+11506349 DEBUG [2019-06-13 07:18:32]  Pooling connection [{}->http://192.168.170.129:8080][null]; keep alive indefinitely
+11506349 DEBUG [2019-06-13 07:18:32]  Notifying no-one, there are no waiting threads
+11532824 DEBUG [2019-06-13 07:18:58]  Closing connections idle longer than 30000 SECONDS
+11532824 DEBUG [2019-06-13 07:18:58]  Closing connections idle longer than 30000 SECONDS
+11533022 DEBUG [2019-06-13 07:18:58]  Closing connections idle longer than -1 SECONDS
+11533022 DEBUG [2019-06-13 07:18:58]  Closing connections idle longer than 0 SECONDS
+11533022 DEBUG [2019-06-13 07:18:58]  Closing connection last used @ Thu Jun 13 07:18:32 CST 2019
+11533022 DEBUG [2019-06-13 07:18:58]  Deleting connection [{}->http://192.168.170.129:8080][null]
+11533022 DEBUG [2019-06-13 07:18:58]  Connection 0.0.0.0:50268<->192.168.170.129:8080 closed
+11536060 DEBUG [2019-06-13 07:19:01]  Get connection: {}->http://192.168.170.129:8080, timeout = 5000
+11536060 DEBUG [2019-06-13 07:19:01]  [{}->http://192.168.170.129:8080] total kept alive: 0, total issued: 0, total allocated: 0 out of 200
+11536060 DEBUG [2019-06-13 07:19:01]  No free connections [{}->http://192.168.170.129:8080][null]
+11536060 DEBUG [2019-06-13 07:19:01]  Available capacity: 50 out of 50 [{}->http://192.168.170.129:8080][null]
+11536060 DEBUG [2019-06-13 07:19:01]  Creating new connection [{}->http://192.168.170.129:8080]
+11536060 DEBUG [2019-06-13 07:19:01]  Connecting to 192.168.170.129:8080
+11536061 DEBUG [2019-06-13 07:19:01]  CookieSpec selected: default
+11536061 DEBUG [2019-06-13 07:19:01]  Auth cache not set in the context
+11536061 DEBUG [2019-06-13 07:19:01]  Target auth state: UNCHALLENGED
+11536061 DEBUG [2019-06-13 07:19:01]  Proxy auth state: UNCHALLENGED
+11536061 DEBUG [2019-06-13 07:19:01]  Attempt 1 to execute request
+11536061 DEBUG [2019-06-13 07:19:01]  Sending request: PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1
+11536061 DEBUG [2019-06-13 07:19:01]   >> "PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1[\r][\n]"
+11536061 DEBUG [2019-06-13 07:19:01]   >> "DiscoveryIdentity-Name: DefaultClient[\r][\n]"
+11536061 DEBUG [2019-06-13 07:19:01]   >> "DiscoveryIdentity-Version: 1.4[\r][\n]"
+11536061 DEBUG [2019-06-13 07:19:01]   >> "DiscoveryIdentity-Id: 192.168.170.1[\r][\n]"
+11536061 DEBUG [2019-06-13 07:19:01]   >> "Accept-Encoding: gzip[\r][\n]"
+11536061 DEBUG [2019-06-13 07:19:01]   >> "Content-Length: 0[\r][\n]"
+11536061 DEBUG [2019-06-13 07:19:01]   >> "Host: 192.168.170.129:8080[\r][\n]"
+11536061 DEBUG [2019-06-13 07:19:01]   >> "Connection: Keep-Alive[\r][\n]"
+11536061 DEBUG [2019-06-13 07:19:01]   >> "User-Agent: Java-EurekaClient/v1.8.6[\r][\n]"
+11536061 DEBUG [2019-06-13 07:19:01]   >> "[\r][\n]"
+11536061 DEBUG [2019-06-13 07:19:01]  >> PUT /eureka/apps/APP-MAYIKT-PORTALWEB/xxm:app-mayikt-portalWeb:8400?status=UP&lastDirtyTimestamp=1560370018583 HTTP/1.1
+11536061 DEBUG [2019-06-13 07:19:01]  >> DiscoveryIdentity-Name: DefaultClient
+11536061 DEBUG [2019-06-13 07:19:01]  >> DiscoveryIdentity-Version: 1.4
+11536061 DEBUG [2019-06-13 07:19:01]  >> DiscoveryIdentity-Id: 192.168.170.1
+11536061 DEBUG [2019-06-13 07:19:01]  >> Accept-Encoding: gzip
+11536061 DEBUG [2019-06-13 07:19:01]  >> Content-Length: 0
+11536061 DEBUG [2019-06-13 07:19:01]  >> Host: 192.168.170.129:8080
+11536061 DEBUG [2019-06-13 07:19:01]  >> Connection: Keep-Alive
+11536061 DEBUG [2019-06-13 07:19:01]  >> User-Agent: Java-EurekaClient/v1.8.6
+11536062 DEBUG [2019-06-13 07:19:01]   << "HTTP/1.1 200 OK[\r][\n]"
+11536062 DEBUG [2019-06-13 07:19:01]   << "Server: Apache-Coyote/1.1[\r][\n]"
+11536062 DEBUG [2019-06-13 07:19:01]   << "X-Content-Type-Options: nosniff[\r][\n]"
+11536062 DEBUG [2019-06-13 07:19:01]   << "X-XSS-Protection: 1; mode=block[\r][\n]"
+11536062 DEBUG [2019-06-13 07:19:01]   << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+11536062 DEBUG [2019-06-13 07:19:01]   << "Pragma: no-cache[\r][\n]"
+11536062 DEBUG [2019-06-13 07:19:01]   << "Expires: 0[\r][\n]"
+11536062 DEBUG [2019-06-13 07:19:01]   << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+11536062 DEBUG [2019-06-13 07:19:01]   << "Content-Type: application/xml[\r][\n]"
+11536062 DEBUG [2019-06-13 07:19:01]   << "Content-Length: 0[\r][\n]"
+11536062 DEBUG [2019-06-13 07:19:01]   << "Date: Wed, 12 Jun 2019 23:19:01 GMT[\r][\n]"
+11536062 DEBUG [2019-06-13 07:19:01]   << "[\r][\n]"
+11536062 DEBUG [2019-06-13 07:19:01]  Receiving response: HTTP/1.1 200 OK
+11536062 DEBUG [2019-06-13 07:19:01]  << HTTP/1.1 200 OK
+11536062 DEBUG [2019-06-13 07:19:01]  << Server: Apache-Coyote/1.1
+11536062 DEBUG [2019-06-13 07:19:01]  << X-Content-Type-Options: nosniff
+11536062 DEBUG [2019-06-13 07:19:01]  << X-XSS-Protection: 1; mode=block
+11536062 DEBUG [2019-06-13 07:19:01]  << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+11536063 DEBUG [2019-06-13 07:19:01]  << Pragma: no-cache
+11536063 DEBUG [2019-06-13 07:19:01]  << Expires: 0
+11536063 DEBUG [2019-06-13 07:19:01]  << X-Frame-Options: SAMEORIGIN
+11536063 DEBUG [2019-06-13 07:19:01]  << Content-Type: application/xml
+11536063 DEBUG [2019-06-13 07:19:01]  << Content-Length: 0
+11536063 DEBUG [2019-06-13 07:19:01]  << Date: Wed, 12 Jun 2019 23:19:01 GMT
+11536063 DEBUG [2019-06-13 07:19:01]  Connection can be kept alive indefinitely
+11536063 DEBUG [2019-06-13 07:19:01]  Released connection is reusable.
+11536063 DEBUG [2019-06-13 07:19:01]  Releasing connection [{}->http://192.168.170.129:8080][null]
+11536063 DEBUG [2019-06-13 07:19:01]  Pooling connection [{}->http://192.168.170.129:8080][null]; keep alive indefinitely
+11536063 DEBUG [2019-06-13 07:19:01]  Notifying no-one, there are no waiting threads
+11536351 DEBUG [2019-06-13 07:19:02]  Get connection: {}->http://192.168.170.129:8080, timeout = 5000
+11536351 DEBUG [2019-06-13 07:19:02]  [{}->http://192.168.170.129:8080] total kept alive: 1, total issued: 0, total allocated: 1 out of 200
+11536351 DEBUG [2019-06-13 07:19:02]  Getting free connection [{}->http://192.168.170.129:8080][null]
+11536351 DEBUG [2019-06-13 07:19:02]  Stale connection check
+11536352 DEBUG [2019-06-13 07:19:02]  CookieSpec selected: default
+11536352 DEBUG [2019-06-13 07:19:02]  Auth cache not set in the context
+11536352 DEBUG [2019-06-13 07:19:02]  Target auth state: UNCHALLENGED
+11536352 DEBUG [2019-06-13 07:19:02]  Proxy auth state: UNCHALLENGED
+11536352 DEBUG [2019-06-13 07:19:02]  Attempt 1 to execute request
+11536352 DEBUG [2019-06-13 07:19:02]  Sending request: GET /eureka/apps/delta HTTP/1.1
+11536352 DEBUG [2019-06-13 07:19:02]   >> "GET /eureka/apps/delta HTTP/1.1[\r][\n]"
+11536352 DEBUG [2019-06-13 07:19:02]   >> "Accept: application/json[\r][\n]"
+11536352 DEBUG [2019-06-13 07:19:02]   >> "DiscoveryIdentity-Name: DefaultClient[\r][\n]"
+11536352 DEBUG [2019-06-13 07:19:02]   >> "DiscoveryIdentity-Version: 1.4[\r][\n]"
+11536352 DEBUG [2019-06-13 07:19:02]   >> "DiscoveryIdentity-Id: 192.168.170.1[\r][\n]"
+11536352 DEBUG [2019-06-13 07:19:02]   >> "Accept-Encoding: gzip[\r][\n]"
+11536352 DEBUG [2019-06-13 07:19:02]   >> "Host: 192.168.170.129:8080[\r][\n]"
+11536352 DEBUG [2019-06-13 07:19:02]   >> "Connection: Keep-Alive[\r][\n]"
+11536353 DEBUG [2019-06-13 07:19:02]   >> "User-Agent: Java-EurekaClient/v1.8.6[\r][\n]"
+11536353 DEBUG [2019-06-13 07:19:02]   >> "[\r][\n]"
+11536353 DEBUG [2019-06-13 07:19:02]  >> GET /eureka/apps/delta HTTP/1.1
+11536353 DEBUG [2019-06-13 07:19:02]  >> Accept: application/json
+11536353 DEBUG [2019-06-13 07:19:02]  >> DiscoveryIdentity-Name: DefaultClient
+11536353 DEBUG [2019-06-13 07:19:02]  >> DiscoveryIdentity-Version: 1.4
+11536353 DEBUG [2019-06-13 07:19:02]  >> DiscoveryIdentity-Id: 192.168.170.1
+11536353 DEBUG [2019-06-13 07:19:02]  >> Accept-Encoding: gzip
+11536353 DEBUG [2019-06-13 07:19:02]  >> Host: 192.168.170.129:8080
+11536353 DEBUG [2019-06-13 07:19:02]  >> Connection: Keep-Alive
+11536353 DEBUG [2019-06-13 07:19:02]  >> User-Agent: Java-EurekaClient/v1.8.6
+11536354 DEBUG [2019-06-13 07:19:02]   << "HTTP/1.1 200 OK[\r][\n]"
+11536354 DEBUG [2019-06-13 07:19:02]   << "Server: Apache-Coyote/1.1[\r][\n]"
+11536354 DEBUG [2019-06-13 07:19:02]   << "X-Content-Type-Options: nosniff[\r][\n]"
+11536354 DEBUG [2019-06-13 07:19:02]   << "X-XSS-Protection: 1; mode=block[\r][\n]"
+11536354 DEBUG [2019-06-13 07:19:02]   << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+11536354 DEBUG [2019-06-13 07:19:02]   << "Pragma: no-cache[\r][\n]"
+11536354 DEBUG [2019-06-13 07:19:02]   << "Expires: 0[\r][\n]"
+11536354 DEBUG [2019-06-13 07:19:02]   << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+11536355 DEBUG [2019-06-13 07:19:02]   << "Content-Encoding: gzip[\r][\n]"
+11536355 DEBUG [2019-06-13 07:19:02]   << "Content-Type: application/json[\r][\n]"
+11536355 DEBUG [2019-06-13 07:19:02]   << "Content-Length: 99[\r][\n]"
+11536355 DEBUG [2019-06-13 07:19:02]   << "Date: Wed, 12 Jun 2019 23:19:01 GMT[\r][\n]"
+11536355 DEBUG [2019-06-13 07:19:02]   << "[\r][\n]"
+11536355 DEBUG [2019-06-13 07:19:02]  Receiving response: HTTP/1.1 200 OK
+11536355 DEBUG [2019-06-13 07:19:02]  << HTTP/1.1 200 OK
+11536355 DEBUG [2019-06-13 07:19:02]  << Server: Apache-Coyote/1.1
+11536355 DEBUG [2019-06-13 07:19:02]  << X-Content-Type-Options: nosniff
+11536355 DEBUG [2019-06-13 07:19:02]  << X-XSS-Protection: 1; mode=block
+11536355 DEBUG [2019-06-13 07:19:02]  << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+11536355 DEBUG [2019-06-13 07:19:02]  << Pragma: no-cache
+11536355 DEBUG [2019-06-13 07:19:02]  << Expires: 0
+11536356 DEBUG [2019-06-13 07:19:02]  << X-Frame-Options: SAMEORIGIN
+11536356 DEBUG [2019-06-13 07:19:02]  << Content-Encoding: gzip
+11536356 DEBUG [2019-06-13 07:19:02]  << Content-Type: application/json
+11536356 DEBUG [2019-06-13 07:19:02]  << Content-Length: 99
+11536356 DEBUG [2019-06-13 07:19:02]  << Date: Wed, 12 Jun 2019 23:19:01 GMT
+11536356 DEBUG [2019-06-13 07:19:02]  Connection can be kept alive indefinitely
+11536356 DEBUG [2019-06-13 07:19:02]   << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0xab]VJ,([0xc8][0xc9]LN,[0xc9][0xcc][0xcf]+V[0xb2][0xaa]V*K-*[0x6][0xb1][0xe3][0xe3]SRsJ[0x12][0x95][0xac][0x94][0xc][0x8d][0x8d][0xcc][0x94]t@[\n]"
+11536356 DEBUG [2019-06-13 07:19:02]   << "[0x81][0x82][0x19][0x89][0xc5][0x19][0xc9][0xf9])[0xa9]@[0xf1][0xe0][0x10][0xc7][0xa0][0x10]O?[0xf7]x[0xc3][0xf8][0xd0][0x80]x[0x93]x[0x88][0x1a][0x98]aJV[0xd1][0xb1][0xb5][0xb5][0x0]F[0xea]T[0xdf]`[0x0][0x0][0x0]"
+11536356 DEBUG [2019-06-13 07:19:02]  Released connection is reusable.
+11536356 DEBUG [2019-06-13 07:19:02]  Releasing connection [{}->http://192.168.170.129:8080][null]
+11536356 DEBUG [2019-06-13 07:19:02]  Pooling connection [{}->http://192.168.170.129:8080][null]; keep alive indefinitely
+11536356 DEBUG [2019-06-13 07:19:02]  Notifying no-one, there are no waiting threads
