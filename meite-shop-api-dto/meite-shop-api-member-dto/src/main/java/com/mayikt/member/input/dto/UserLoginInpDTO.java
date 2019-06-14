@@ -3,6 +3,7 @@ package com.mayikt.member.input.dto;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 /**
  * 
@@ -18,6 +19,7 @@ import lombok.Data;
  */
 @Data
 @ApiModel(value = "用户登陆参数")
+@Accessors(chain = true)
 public class UserLoginInpDTO {
 	/**
 	 * 手机号码

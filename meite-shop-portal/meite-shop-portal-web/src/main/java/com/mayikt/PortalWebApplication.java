@@ -30,7 +30,7 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 @EnableEurekaClient
 @EnableApolloConfig
 @EnableRedisHttpSession
-@ComponentScan(basePackages={"com.mayikt.api","com.mayikt","com.mayikt.common"})//扫描接口
+@ComponentScan(basePackages={"com.mayikt.api","com.mayikt","com.mayikt.common","com.xxl.sso"})//扫描接口
 public class PortalWebApplication {
 
 	public static void main(String[] args) {

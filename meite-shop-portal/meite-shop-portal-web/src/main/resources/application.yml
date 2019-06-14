@@ -44,3 +44,13 @@
 #      max-wait: -1
 #    session:
 #      store-type: redis
+#xxl-sso:
+#  excluded:
+#    paths:
+#xxl:
+#  sso:
+#    server: http://xxlssoserver.com:8080/xxl-sso-server
+#    logout:
+#      path: /logout
+#    redis:
+#      address: redis://120.78.137.82:6379

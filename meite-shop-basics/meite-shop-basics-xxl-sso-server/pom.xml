@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>meite-shop-basics</artifactId>
+        <groupId>com.mayikt</groupId>
+        <version>1.0-RELEASE</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>meite-shop-basics-xxl-sso-server</artifactId>
+
+    <dependencies>
+
+        <!-- 阿波罗整合 SpringBoot 开始 -->
+        <dependency>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-client</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <!-- 阿波罗整合 SpringBoot 结束 -->
+
+
+        <!-- freemarker -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+
+        <!-- sso core -->
+        <dependency>
+            <groupId>com.xuxueli</groupId>
+            <artifactId>xxl-sso-core</artifactId>
+            <version>1.1.1-SNAPSHOT</version>
+        </dependency>
+
+
+        <!-- springcloud feign组件 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mayikt</groupId>
+            <artifactId>meite-shop-service-api-member</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mayikt</groupId>
+            <artifactId>meite-shop-common-web-core</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
+    </dependencies>
+
+</project>

@@ -23,7 +23,6 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @MapperScan(basePackages = {"com.mayikt.member.dao"})
 @EnableFeignClients(basePackages = "com.mayikt.api")  //开启FeignClient支持
 @ComponentScan(basePackages={"com.mayikt.api","com.mayikt.member","com.mayikt.common"})//扫描接口
-//@EnableAspectJAutoProxy
 public class MemberApplication {
     public static void main(String[] args) {
         SpringApplication.run(MemberApplication.class,args);

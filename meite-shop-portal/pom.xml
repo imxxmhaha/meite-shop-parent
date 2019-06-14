@@ -13,9 +13,12 @@
     <packaging>pom</packaging>
     <modules>
         <module>meite-shop-portal-web</module>
+        <module>meite-shop-portal-pay-web</module>
     </modules>
 
     <dependencies>
+
+
         <!-- 阿波罗整合 SpringBoot 开始 -->
         <dependency>
             <groupId>com.ctrip.framework.apollo</groupId>
@@ -29,5 +32,37 @@
         </dependency>
         <!-- 阿波罗整合 SpringBoot 结束 -->
 
+        <!-- springcloud feign组件 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <!--spring-session依赖开始-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+        </dependency>
+        <!--spring-session依赖结束-->
+
+        <!-- sso core -->
+        <dependency>
+            <groupId>com.xuxueli</groupId>
+            <artifactId>xxl-sso-core</artifactId>
+            <version>1.1.1-SNAPSHOT</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
     </dependencies>
 </project>

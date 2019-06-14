@@ -8,10 +8,6 @@
     </parent>
     <artifactId>meite-shop-portal-web</artifactId>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-freemarker</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>com.mayikt</groupId>
@@ -36,19 +32,9 @@
             <version>1.0</version>
         </dependency>
 
-        <!--spring-session依赖开始-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-pool2</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.session</groupId>
-            <artifactId>spring-session-data-redis</artifactId>
-        </dependency>
-        <!--spring-session依赖结束-->
+
+
+
+
     </dependencies>
 </project>

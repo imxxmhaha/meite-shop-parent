@@ -1,0 +1,31 @@
+#spring:
+#  application:
+#    name: app-mayikt-xxl-sso-server
+#  freemarker:
+#    settings:
+#      number_format: 0.##########
+#    charset: UTF-8
+#    request-context-attribute: request
+#    templateLoaderPath: classpath:/templates/
+#    suffix: .ftl
+#  resources:
+#    static-locations: classpath:/static/
+#  mvc:
+#    static-path-pattern: /static/**
+####服务注册到eureka地址
+#eureka:
+#  client:
+#    service-url:
+#           defaultZone: http://192.168.170.129:8080/eureka
+#server:
+##  context-path: /xxl-sso-server
+#  port: 8080
+#  servlet:
+#    context-path: /xxl-sso-server
+#
+#xxl:
+#  sso:
+#    redis:
+#      address: redis://120.78.137.82:6379
+#      expire:
+#        minite: 1440

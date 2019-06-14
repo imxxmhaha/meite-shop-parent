@@ -1,0 +1,47 @@
+##### 整合freemarker
+#spring:
+#    freemarker:
+#        cache: false
+#        charset: UTF-8
+#        check-template-location: true
+#        content-type: text/html
+#        expose-request-attributes: true
+#        expose-session-attributes: true
+#        request-context-attribute: request
+#        suffix: .ftl
+#        template-loader-path:
+#        - classpath:/templates
+#    application:
+#        name: app-mayikt-portal-pay-web
+####服务注册到eureka地址
+#eureka:
+#  client:
+#    service-url:
+#           defaultZone: http://192.168.170.129:8080/eureka
+#server:
+#  port: 8500
+#
+#spring:
+#  redis:
+#    host: 120.78.137.82
+#    port: 6379
+#    pool:
+#      max-idle: 100
+#      min-idle: 1
+#      max-active: 1000
+#      max-wait: -1
+#    session:
+#      store-type: redis
+#
+#xxl-sso:
+#  excluded:
+#    paths:
+#xxl:
+#  sso:
+#    server: http://xxlssoserver.com:8080/xxl-sso-server
+#    logout:
+#      path: /logout
+#    redis:
+#      address: redis://127.0.0.1:6379
+#
+#
