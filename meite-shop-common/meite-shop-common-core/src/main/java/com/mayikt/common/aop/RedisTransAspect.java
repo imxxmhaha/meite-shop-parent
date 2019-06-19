@@ -69,8 +69,8 @@ public class RedisTransAspect {
         manualTransaction.commit(transactionStatus);
     }
 
-    @AfterThrowing(value = "pointcut()", throwing = "ex")
-    public void afterThrowingMethod(JoinPoint joinPoint, Exception ex) {
+    @AfterThrowing(pointcut = "pointcut() && @annotation(throwingEx)", throwing = "ex")
+    public void afterThrowingMethod(JoinPoint joinPoint, Exception ex,RedisTransAdvice throwingEx) {
         HttpServletRequest request = getHttpServletRequest();
         TransactionStatus transactionStatus = (TransactionStatus) request.getAttribute("transactionStatus");
         // 回滚事务
