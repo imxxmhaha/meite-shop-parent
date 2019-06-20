@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mayikt.pay.dao.TransactionDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mayikt.pay.entity.TransactionEntity">
+        <id column="ID" property="id" />
+        <result column="PAY_AMOUNT" property="payAmount" />
+        <result column="PAYMENT_STATUS" property="paymentStatus" />
+        <result column="USER_ID" property="userId" />
+        <result column="ORDER_ID" property="orderId" />
+        <result column="REVISION" property="revision" />
+        <result column="CREATED_BY" property="createdBy" />
+        <result column="CREATED_TIME" property="createdTime" />
+        <result column="UPDATED_BY" property="updatedBy" />
+        <result column="UPDATED_TIME" property="updatedTime" />
+        <result column="PARTYPAY_ID" property="partypayId" />
+        <result column="PAYMENT_ID" property="paymentId" />
+    </resultMap>
+
+</mapper>

@@ -13,6 +13,7 @@
         <module>meite-shop-service-api-weixin</module>
         <module>meite-shop-service-api-member</module>
         <module>meite-shop-service-api-goods</module>
+        <module>meite-shop-service-api-pay</module>
     </modules>
 
     <artifactId>meite-shop-service-api</artifactId>

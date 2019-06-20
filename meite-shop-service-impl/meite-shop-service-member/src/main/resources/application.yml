@@ -68,7 +68,7 @@
 #  configuration:
 #    call-setters-on-nulls: true
 #    map-underscore-to-camel-case: true
-#    cache-enabled: falselogging:
+#    cache-enabled: false
 
 ###Mybatis日志
 #logging:

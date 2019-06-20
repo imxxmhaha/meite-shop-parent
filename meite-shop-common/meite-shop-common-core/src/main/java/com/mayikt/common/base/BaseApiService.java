@@ -1,6 +1,8 @@
 package com.mayikt.common.base;
 
 import com.mayikt.common.constants.Constants;
+import com.mayikt.common.core.utils.MiteBeanUtils;
+import com.mayikt.common.core.utils.ReflectUtil;
 import org.springframework.stereotype.Component;
 
 
@@ -34,6 +36,10 @@ public class BaseApiService<T> {
 	public BaseResponse<T> setResultSuccess(T data) {
 		return setResult(Constants.HTTP_RES_CODE_200, Constants.HTTP_RES_CODE_200_VALUE, data);
 	}
+
+
+
+
 
 	// 返回成功，沒有data值
 	public BaseResponse<T> setResultSuccess() {

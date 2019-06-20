@@ -15,6 +15,7 @@
         <module>meite-shop-api-member-dto</module>
         <module>meite-shop-api-weixin-dto</module>
         <module>meite-shop-api-product-dto</module>
+        <module>meite-shop-api-pay-dto</module>
     </modules>
 
     <dependencies>

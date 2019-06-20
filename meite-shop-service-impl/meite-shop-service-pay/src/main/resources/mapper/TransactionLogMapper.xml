@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mayikt.pay.dao.TransactionLogDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mayikt.pay.entity.TransactionLogEntity">
+        <id column="ID" property="id" />
+        <result column="SYNCH_LOG" property="synchLog" />
+        <result column="ASYNC_LOG" property="asyncLog" />
+        <result column="CHANNEL_ID" property="channelId" />
+        <result column="TRANSACTION_ID" property="transactionId" />
+        <result column="REVISION" property="revision" />
+        <result column="CREATED_BY" property="createdBy" />
+        <result column="CREATED_TIME" property="createdTime" />
+        <result column="UPDATED_BY" property="updatedBy" />
+        <result column="UPDATED_TIME" property="updatedTime" />
+        <result column="untitled" property="untitled" />
+    </resultMap>
+
+</mapper>

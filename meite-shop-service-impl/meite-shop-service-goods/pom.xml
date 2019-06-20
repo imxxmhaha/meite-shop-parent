@@ -12,6 +12,12 @@
     <artifactId>meite-shop-service-goods</artifactId>
 
     <dependencies>
+        <!--依赖elk日志收集模块-->
+        <dependency>
+            <groupId>com.mayikt</groupId>
+            <artifactId>meite-shop-basics-elk-kafka</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
         <dependency>
             <groupId>com.mayikt</groupId>
             <artifactId>meite-shop-service-api-goods</artifactId>

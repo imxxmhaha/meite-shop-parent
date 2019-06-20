@@ -10,6 +10,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>meite-shop-portal-pay-web</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.mayikt</groupId>
+            <artifactId>meite-shop-service-api-pay</artifactId>
+            <version>1.0-RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 
 </project>

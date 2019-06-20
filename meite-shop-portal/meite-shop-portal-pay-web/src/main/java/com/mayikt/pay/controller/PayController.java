@@ -1,25 +1,49 @@
 package com.mayikt.pay.controller;
 
+import com.mayikt.api.pay.service.PayMentTransacInfoService;
+import com.mayikt.api.pay.service.PaymentChannelService;
+import com.mayikt.common.base.BaseResponse;
+import com.mayikt.pay.out.dto.PayMentTransacDTO;
+import com.mayikt.pay.out.dto.PaymentChannelDTO;
+import com.mayikt.web.base.BaseWebController;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 /**
- * 
- * 
- * 
- * @description: 支付网站
- * @author: 97后互联网架构师-余胜军
- * @contact: QQ644064779、微信yushengjun644 www.mayikt.com
- * @date: 2019年1月3日 下午3:03:17
- * @version V1.0
- * @Copyright 该项目“基于SpringCloud2.x构建微服务电商项目”由每特教育|蚂蚁课堂版权所有，未经过允许的情况下，
- *            私自分享视频和源码属于违法行为。
  */
 @Controller
-public class PayController {
+public class PayController extends BaseWebController {
 
-	@RequestMapping("/")
-	public String index() {
+	@Autowired
+	private PayMentTransacInfoService payMentTransacInfoFeign;
+	@Autowired
+	private PaymentChannelService paymentChannelFeign;
+
+
+	@RequestMapping("/pay")
+	public String index(String payToken, Model model) {
+		// 1.验证payToken参数
+		if (StringUtils.isEmpty(payToken)) {
+			setErrorMsg(model, "支付令牌不能为空!");
+			return ERROR_500_FTL;
+		}
+		// 2.使用payToken查询支付信息
+		BaseResponse<PayMentTransacDTO> tokenByPayMentTransac = payMentTransacInfoFeign.tokenByPayMentTransac(payToken);
+		if (!isSuccess(tokenByPayMentTransac)) {
+			setErrorMsg(model, tokenByPayMentTransac.getMsg());
+			return ERROR_500_FTL;
+		}
+		// 3.查询支付信息
+		PayMentTransacDTO data = tokenByPayMentTransac.getData();
+		model.addAttribute("data", data);
+		// 4.查询渠道信息
+		List<PaymentChannelDTO> paymentChanneList = paymentChannelFeign.selectAll();
+		model.addAttribute("paymentChanneList", paymentChanneList);
 		return "index";
 	}
 }

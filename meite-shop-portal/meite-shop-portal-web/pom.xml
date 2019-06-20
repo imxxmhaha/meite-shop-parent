@@ -19,11 +19,6 @@
             <artifactId>UserAgentUtils</artifactId>
             <version>1.2.4</version>
         </dependency>
-        <dependency>
-            <groupId>com.mayikt</groupId>
-            <artifactId>meite-shop-common-web-core</artifactId>
-            <version>1.0-RELEASE</version>
-        </dependency>
 
         <!--引入腾讯联合登陆平台sdk-->
         <dependency>
