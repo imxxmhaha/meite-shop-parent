@@ -14,6 +14,7 @@
         <module>meite-shop-common</module>
         <module>meite-shop-api-dto</module>
         <module>meite-shop-portal</module>
+        <module>meite-shop-pay-plugin</module>
     </modules>
     <packaging>pom</packaging>
     

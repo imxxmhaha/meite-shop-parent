@@ -19,7 +19,7 @@ import org.springframework.context.annotation.ComponentScan;
 //@EnableApolloConfig
 @MapperScan(basePackages = {"com.mayikt.pay.dao"})
 @EnableFeignClients(basePackages = "com.mayikt.api")  //开启FeignClient支持
-@ComponentScan(basePackages={"com.mayikt.api","com.mayikt.pay","com.mayikt.common"})//扫描接口
+@ComponentScan(basePackages={"com.mayikt.api","com.mayikt.pay","com.mayikt"})//扫描接口
 public class PayServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(PayServiceApplication.class,args);
