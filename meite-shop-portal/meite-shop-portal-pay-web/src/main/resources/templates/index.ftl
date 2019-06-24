@@ -169,7 +169,7 @@ body {
 				<hr />
 				<div class="scent-pay-type">
 					<#list paymentChanneList as p>
-					<a href="/channel?channelId=${p.channelId}"><button
+					<a id="toPayHtml"  href="/toPayHtml?channelId=${p.channelId}&payToken=${payToken}"><button
 							class="layui-btn layui-btn-primary layui-btn-lg">
 							<i class="layui-icon layui-icon-rmb" style="color: #1E9FFF"></i>
 							${p.channelName}
@@ -233,6 +233,8 @@ body {
 		
 		setInterval("orderStatus()",3000);
 	 */
+
+
 </script>
 
 </html>

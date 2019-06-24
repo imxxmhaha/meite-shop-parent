@@ -2,9 +2,7 @@ package com.mayikt.pay.dao;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.mayikt.pay.entity.TransactionEntity;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 /**
  * <p>
@@ -21,4 +19,11 @@ public interface TransactionDao extends BaseMapper<TransactionEntity> {
 
     @Select("SELECT ID AS ID ,pay_Amount AS payAmount,payment_Status AS paymentStatus,user_ID AS userId, order_Id AS orderId , created_Time as createdTime ,partypay_Id as partyPayId , payment_Id as paymentId FROM payment_transaction WHERE ID=#{id};")
     public TransactionEntity selectById(Long id);
+
+
+    @Select("SELECT ID AS ID ,pay_Amount AS payAmount,payment_Status AS paymentStatus,user_ID AS userId, order_Id AS orderId , created_Time as createdTime ,partypay_Id as partyPayId , payment_Id as paymentId FROM payment_transaction WHERE PAYMENT_ID=#{paymentId};")
+    public TransactionEntity selectByPaymentId(String paymentId);
+
+    @Update("update payment_transaction SET PAYMENT_STATUS=#{paymentStatus}  WHERE PAYMENT_ID=#{paymentId};")
+    public int updatePaymentStatus(@Param("paymentStatus") String paymentStatus, @Param("paymentId") String paymentId);
 }
