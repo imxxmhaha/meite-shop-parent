@@ -19,6 +19,11 @@
 
 
     <dependencies>
+        <!-- SpringBoot整合eureka客户端 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
         <!-- 阿波罗整合 SpringBoot 开始 -->
         <dependency>
             <groupId>com.ctrip.framework.apollo</groupId>

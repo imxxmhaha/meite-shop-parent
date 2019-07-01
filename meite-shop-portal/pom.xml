@@ -18,6 +18,12 @@
 
     <dependencies>
 
+        <!-- SpringBoot整合eureka客户端 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.mayikt</groupId>
             <artifactId>meite-shop-common-web-core</artifactId>
@@ -62,7 +68,6 @@
             <artifactId>xxl-sso-core</artifactId>
             <version>1.1.1-SNAPSHOT</version>
         </dependency>
-
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
