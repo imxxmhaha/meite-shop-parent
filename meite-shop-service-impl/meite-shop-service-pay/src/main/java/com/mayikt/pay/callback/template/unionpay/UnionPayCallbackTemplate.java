@@ -10,11 +10,14 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.alibaba.fastjson.JSONObject;
 import com.mayikt.pay.dao.TransactionDao;
 import com.mayikt.pay.entity.TransactionEntity;
+import com.mayikt.pay.mq.producer.IntegralProducer;
 import com.unionpay.acp.demo.UnionPayBase;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import com.mayikt.pay.callback.template.AbstractPayCallbackTemplate;
@@ -22,6 +25,7 @@ import com.mayikt.pay.constant.PayConstant;
 import com.unionpay.acp.sdk.AcpService;
 import com.unionpay.acp.sdk.LogUtil;
 import com.unionpay.acp.sdk.SDKConstants;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @description: 银联支付回调模版实现
@@ -31,6 +35,8 @@ public class UnionPayCallbackTemplate extends AbstractPayCallbackTemplate {
 
 	@Autowired
 	private TransactionDao paymentTransactionMapper;
+	@Autowired
+	private IntegralProducer integralProducer;
 
 	@Override
 	public Map<String, String> verifySignature(HttpServletRequest req, HttpServletResponse resp) {
@@ -60,6 +66,7 @@ public class UnionPayCallbackTemplate extends AbstractPayCallbackTemplate {
 	// 异步回调中网络尝试延迟，导致异步回调重复执行 可能存在幂等性问题
 	//
 	@Override
+	@Transactional
 	public String asyncService(Map<String, String> verifySignature) {
 
 		String orderId = verifySignature.get("orderId"); // 获取后台通知的数据，其他字段也可用类似方式获取
@@ -80,8 +87,20 @@ public class UnionPayCallbackTemplate extends AbstractPayCallbackTemplate {
 		// 2.将状态改为已经支付成功
 		paymentTransactionMapper.updatePaymentStatus(PayConstant.PAY_STATUS_SUCCESS + "", orderId);
 		// 3.调用积分服务接口增加积分(处理幂等性问题)
+		addMQIntegral(paymentTransaction);
+		int i = 1/0;
 		return successResult();
 	}
+
+	@Async
+	private void addMQIntegral(TransactionEntity paymentTransaction){
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("paymentId", paymentTransaction.getPaymentId());
+		jsonObject.put("userId", paymentTransaction.getUserId());
+		jsonObject.put("integral", 100);// 积分暂定100
+		integralProducer.send(jsonObject);
+	}
+
 
 	@Override
 	public String failResult() {

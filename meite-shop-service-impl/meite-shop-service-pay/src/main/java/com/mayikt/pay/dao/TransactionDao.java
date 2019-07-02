@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.mayikt.pay.entity.TransactionEntity;
 import org.apache.ibatis.annotations.*;
 
+import java.util.List;
+
 /**
  * <p>
  * 支付交易  Mapper 接口
@@ -26,4 +28,14 @@ public interface TransactionDao extends BaseMapper<TransactionEntity> {
 
     @Update("update payment_transaction SET PAYMENT_STATUS=#{paymentStatus}  WHERE PAYMENT_ID=#{paymentId};")
     public int updatePaymentStatus(@Param("paymentStatus") String paymentStatus, @Param("paymentId") String paymentId);
+
+    @Update("update payment_transaction SET PAYMENT_STATUS=#{paymentStatus},payment_channel=#{paymentChannel}   WHERE PAYMENT_ID=#{paymentId}; ")
+    public int updatePaymentStatus(@Param("paymentStatus") String paymentStatus, @Param("paymentId") String paymentId,
+                                   @Param("paymentChannel") String paymentChannel);
+
+    @Select("SELECT ID AS ID ,pay_Amount AS payAmount,payment_Status AS paymentStatus,user_ID AS userId, order_Id AS orderId , created_Time as createdTime ,partypay_Id as partyPayId , payment_Id as paymentId ,payment_channel as paymentChannel FROM payment_transaction WHERE PAYMENT_ID=#{paymentId} and paymentStatus=0 ;")
+    public TransactionEntity selectByPaymentNoPayment(String paymentId);
+
+    @Select("SELECT ID AS ID ,pay_Amount AS payAmount,payment_Status AS paymentStatus,user_ID AS userId, order_Id AS orderId , created_Time as createdTime ,partypay_Id as partyPayId , payment_Id as paymentId ,payment_channel as paymentChannel FROM payment_transaction WHERE paymentStatus=0 ;")
+    public List<TransactionEntity> selectByStatusStay();
 }

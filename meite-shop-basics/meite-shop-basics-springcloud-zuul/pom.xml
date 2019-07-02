@@ -12,6 +12,19 @@
     <artifactId>meite-shop-basics-springcloud-zuul</artifactId>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.mayikt</groupId>
+            <artifactId>meite-shop-service-api-auth</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mayikt</groupId>
+            <artifactId>meite-shop-common-core</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
@@ -42,5 +55,12 @@
             之后依赖该项目的项目如果想要使用devtools，需要重新引入 -->
             <optional>true</optional>
         </dependency>
+
+        <!-- springcloud feign组件 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
     </dependencies>
 </project>

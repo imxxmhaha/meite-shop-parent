@@ -14,6 +14,8 @@
         <module>meite-shop-service-member</module>
         <module>meite-shop-service-goods</module>
         <module>meite-shop-service-pay</module>
+        <module>meite-shop-service-integral</module>
+        <module>meite-shop-service-auth</module>
     </modules>
     <artifactId>meite-shop-service-impl</artifactId>
 

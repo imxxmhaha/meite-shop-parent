@@ -41,7 +41,20 @@ spring:
       pool-name: DatebookHikariCP
       max-lifetime: 28740000
       connection-test-query: SELECT 1
-
+  rabbitmq:
+  ####连接地址
+    host: 192.168.170.129
+   ####端口号
+    port: 5672
+   ####账号
+    username: guest
+   ####密码
+    password: guest
+   ### 地址
+    virtual-host: /admin_host
+    ###开启消息确认机制 confirms
+    publisher-confirms: true
+    publisher-returns: true
 
 
 
