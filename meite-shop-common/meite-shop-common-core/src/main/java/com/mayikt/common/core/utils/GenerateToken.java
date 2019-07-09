@@ -1,5 +1,7 @@
 package com.mayikt.common.core.utils;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import org.apache.commons.lang.StringUtils;
@@ -15,8 +17,8 @@ public class GenerateToken {
 	/**
 	 * 生成令牌
 	 * 
-	 * @param keyPrefix
-	 *            令牌key前缀
+	 * @param
+	 *
 	 * @param redisValue
 	 *            redis存放的值
 	 * @return 返回token
@@ -43,6 +45,26 @@ public class GenerateToken {
 		String token = keyPrefix + UUID.randomUUID().toString().replace("-", "");
 		redisUtil.setString(token, redisValue, time);
 		return token;
+	}
+
+	public void createListToken(String keyPrefix, String redisKey, Long tokenQuantity) {
+		List<String> listToken = getListToken(keyPrefix, tokenQuantity);
+		redisUtil.setList(redisKey, listToken);
+	}
+
+	public List<String> getListToken(String keyPrefix, Long tokenQuantity) {
+		List<String> listToken = new ArrayList<>();
+		for (int i = 0; i < tokenQuantity; i++) {
+			String token = keyPrefix + UUID.randomUUID().toString().replace("-", "");
+			listToken.add(token);
+		}
+		return listToken;
+
+	}
+
+	public String getListKeyToken(String key) {
+		String value = redisUtil.getStringRedisTemplate().opsForList().leftPop(key);
+		return value;
 	}
 
 	/**

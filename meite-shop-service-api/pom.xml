@@ -16,6 +16,7 @@
         <module>meite-shop-service-api-pay</module>
         <module>meite-shop-service-api-integral</module>
         <module>meite-shop-service-api-auth</module>
+        <module>meite-shop-service-api-spike</module>
     </modules>
 
     <artifactId>meite-shop-service-api</artifactId>
