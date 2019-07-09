@@ -1,8 +1,10 @@
 package com.mayikt.spike.service.impl;
 
+import com.google.common.util.concurrent.RateLimiter;
 import com.mayikt.common.base.BaseApiService;
 import com.mayikt.common.base.BaseResponse;
 import com.mayikt.common.core.utils.GenerateToken;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -12,12 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.alibaba.fastjson.JSONObject;
 import com.mayikt.api.spike.service.SpikeCommodityService;
 import com.mayikt.spike.producer.SpikeCommodityProducer;
-import com.mayikt.spike.service.mapper.OrderMapper;
 import com.mayikt.spike.service.mapper.SeckillMapper;
-import com.mayikt.spike.service.mapper.entity.OrderEntity;
 import com.mayikt.spike.service.mapper.entity.SeckillEntity;
 
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @Slf4j
@@ -29,9 +31,20 @@ public class SpikeCommodityServiceImpl extends BaseApiService<JSONObject> implem
 	@Autowired
 	private SpikeCommodityProducer spikeCommodityProducer;
 
+	// 每秒存入令牌桶中Token为1个  1s/个
+	//private RateLimiter rateLimiter = RateLimiter.create(1);
+
 	@Override
 	@Transactional
+	@HystrixCommand(fallbackMethod = "spikeFallback")
 	public BaseResponse<JSONObject> spike(String phone, Long seckillId) {
+		log.info(">>>>>>秒杀服务接口:spike()线程名称:" + Thread.currentThread().getName());
+
+		 //boolean tryAcquire = rateLimiter.tryAcquire(0, TimeUnit.SECONDS);
+		 //if (!tryAcquire) {
+		 //return setResultError("服务忙，请稍后重试!");
+		 //}
+
 		// 1.参数验证
 		if (StringUtils.isEmpty(phone)) {
 			return setResultError("手机号码不能为空!");
@@ -51,11 +64,23 @@ public class SpikeCommodityServiceImpl extends BaseApiService<JSONObject> implem
 		return setResultSuccess("正在排队中.......");
 	}
 
+
+	/**
+	 * 服务降级
+	 * @HystrixCommand(fallbackMethod = "spikeFallback")
+	 * @param phone
+	 * @param seckillId
+	 * @return
+	 */
+	private BaseResponse<JSONObject> spikeFallback(String phone, Long seckillId) {
+		return setResultError("服务器忙,请稍后重试!");
+	}
+
 	/**
 	 * 获取到秒杀token之后，异步放入mq中实现修改商品的库存
 	 */
 	@Async
-	private void sendSeckillMsg(Long seckillId, String phone) {
+	public void sendSeckillMsg(Long seckillId, String phone) {
 		JSONObject jsonObject = new JSONObject();
 		jsonObject.put("seckillId", seckillId);
 		jsonObject.put("phone", phone);
@@ -91,7 +116,7 @@ public class SpikeCommodityServiceImpl extends BaseApiService<JSONObject> implem
 	}
 
 	@Async
-	private void createSeckillToken(Long seckillId, Long tokenQuantity) {
+	public void createSeckillToken(Long seckillId, Long tokenQuantity) {
 		generateToken.createListToken("seckill_", seckillId + "", tokenQuantity);
 	}
 
