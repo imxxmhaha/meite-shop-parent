@@ -43,6 +43,6 @@ zuul:
       path: /api-pay/**
       serviceId: app-mayikt-pay
     api-d:
-        ### 以 /api-pay/访问转发到订单服务
-      path: /public/api-pay/**
-      serviceId: app-mayikt-pay
+      ### 以 /api-pay/访问转发到订单服务
+      path: /api-spike/**
+      serviceId: app-mayikt-spike

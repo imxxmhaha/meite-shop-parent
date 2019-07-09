@@ -1,26 +1,18 @@
 package com.mayikt.zuul.gateway.filter;
 
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import com.mayikt.zuul.gateway.build.GatewayDirector;
-import com.mayikt.zuul.gateway.mapper.BlacklistMapper;
+import com.mayikt.zuul.gateway.handler.GatewayHandler;
+import com.mayikt.zuul.gateway.handler.ResponsibilityClient;
+import com.netflix.zuul.ZuulFilter;
+import com.netflix.zuul.context.RequestContext;
+import com.netflix.zuul.exception.ZuulException;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-
-import com.netflix.zuul.ZuulFilter;
-import com.netflix.zuul.context.RequestContext;
-import com.netflix.zuul.exception.ZuulException;
-
-import lombok.extern.slf4j.Slf4j;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.*;
 
 /**
  * 使用网关拦截客户端所有的请求
@@ -28,10 +20,9 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 @Slf4j
 public class GatewayFilter extends ZuulFilter {
+
 	@Autowired
-	private BlacklistMapper blacklistMapper;
-	@Autowired
-	private GatewayDirector gatewayDirector;
+	private ResponsibilityClient responsibilityClient;
 
 	/**
 	 * 请求之前拦截处理业务逻辑 建议将限制黑名单存放到redis或者携程的阿波罗
@@ -39,14 +30,11 @@ public class GatewayFilter extends ZuulFilter {
 	public Object run() throws ZuulException {
 		RequestContext ctx = RequestContext.getCurrentContext();
 		// 1.获取请求对象
+		// 1.获取请求对象
 		HttpServletRequest request = ctx.getRequest();
-		// 2.获取客户端真实ip地址
-		String ipAddres = getIpAddr(request);
 		HttpServletResponse response = ctx.getResponse();
-		gatewayDirector.direcot(ctx, ipAddres, response, request);
-		// 3. 过滤请求参数、防止XSS攻击
-		Map<String, List<String>> filterParameters = filterParameters(request, ctx);
-		ctx.setRequestQueryParams(filterParameters);
+		GatewayHandler handler = responsibilityClient.getHandler();
+		handler.service(ctx, request, response);
 		return null;
 	}
 	// public/api/api-pay/cratePayToken?payAmount=300222&orderId=2019010203501502&userId=644064

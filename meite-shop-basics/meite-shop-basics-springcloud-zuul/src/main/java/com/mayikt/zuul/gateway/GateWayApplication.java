@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import springfox.documentation.swagger.web.SwaggerResource;
@@ -30,6 +31,7 @@ import java.util.List;
 @EnableApolloConfig
 @EnableFeignClients(basePackages = "com.mayikt.api")  //开启FeignClient支持
 @MapperScan(value = "com.mayikt.zuul.gateway.mapper")
+@ComponentScan(basePackages = "com.mayikt")
 public class GateWayApplication {
 
 	// 获取ApolloConfig
