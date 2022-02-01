@@ -64,7 +64,7 @@
         <dependency>
             <artifactId>xstream</artifactId>
             <groupId>com.thoughtworks.xstream</groupId>
-            <version>1.4.10</version>
+            <version>1.4.19</version>
         </dependency>
         <!--引入wxJava依赖 结束-->
 
